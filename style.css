@@ -1,5 +1,8 @@
 :root{
-  --navy:#0A2342; --navy-2:#123a6b; --accent:#2563EB; --aqua:#00CFFF;
+  --navy:#0A2342;
+  --royal:#1d4ed8;
+  --teal:#06b6d4;
+  --accent:#2563EB;
   --white:#fff; --text:#1f2937; --muted:#64748b; --paper:#F3F4F6;
 }
 *{box-sizing:border-box}
@@ -8,7 +11,7 @@ h1,h2,h3{font-family:'Montserrat',sans-serif;margin:0 0 .5rem}
 .container{width:92%;max-width:1120px;margin:0 auto}
 
 /* Header */
-.site-header{background:linear-gradient(90deg,var(--navy),#1c3f72);color:#fff;position:sticky;top:0;z-index:50}
+.site-header{background:linear-gradient(90deg,var(--navy),#123a6b);color:#fff;position:sticky;top:0;z-index:50}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0}
 .brand{display:flex;align-items:center;gap:.6rem}
 .brand-logo{width:40px;height:40px;border-radius:10px;object-fit:cover;background:#fff}
@@ -22,8 +25,13 @@ h1,h2,h3{font-family:'Montserrat',sans-serif;margin:0 0 .5rem}
 .book-now{animation:pulse 2.4s infinite ease-in-out}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.45)}50%{box-shadow:0 0 0 10px rgba(37,99,235,0)}}
 
-/* Hero */
-.hero{position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(180deg, rgba(10,35,66,.85), rgba(18,58,107,.9));color:#eaf2ff}
+/* NEW hero look: navy→royal→teal sweep */
+.hero{
+  position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center;text-align:center;
+  background: radial-gradient(1200px 500px at 70% -10%, rgba(6,182,212,.35), transparent 60%),
+              linear-gradient(135deg, var(--navy) 0%, #1b3c72 45%, var(--royal) 75%, var(--teal) 100%);
+  color:#f3f8ff;
+}
 .hero-content{position:relative;z-index:1;padding:2.2rem 0}
 .hero-logo-top{width:96px;height:96px;border-radius:50%;object-fit:cover;background:#fff;margin:0 auto 1rem auto;padding:.5rem}
 .hero-title{font-size:2.1rem;margin:.25rem 0 1rem 0;color:#fff}
@@ -60,7 +68,7 @@ h1,h2,h3{font-family:'Montserrat',sans-serif;margin:0 0 .5rem}
 .pair figcaption{padding:.5rem .2rem;font-weight:800;color:var(--navy);text-align:center}
 
 /* Contact */
-.contact{background:linear-gradient(180deg,var(--navy),var(--navy-2));color:#e9eef6}
+.contact{background:linear-gradient(180deg,var(--navy),#123a6b);color:#e9eef6}
 .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:start}
 .list{list-style:none;padding:0;margin:0}
 .list li{margin:.35rem 0}
