@@ -1,0 +1,54 @@
+:root{
+  --navy:#0A2342; --navy-2:#123a6b; --accent:#2563EB; --aqua:#00CFFF;
+  --white:#ffffff; --text:#1f2937; --muted:#64748b; --paper:#F3F4F6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Open Sans',sans-serif;color:var(--text);background:var(--paper)}
+h1,h2,h3{font-family:'Montserrat',sans-serif;margin:0 0 .5rem}
+.container{width:92%;max-width:1120px;margin:0 auto}
+.site-header{background:linear-gradient(90deg,var(--navy),#1c3f72);color:var(--white);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand-logo{width:40px;height:40px;border-radius:10px;object-fit:cover;background:#fff}
+.brand-name{font-weight:800;letter-spacing:.5px}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav a{color:var(--white);text-decoration:none;font-weight:600}
+.btn{background:var(--accent);color:var(--white)!important;padding:.55rem 1rem;border-radius:8px;font-weight:800;display:inline-block;text-decoration:none;transition:transform .2s,opacity .2s}
+.btn:hover{transform:translateY(-1px);opacity:.95}
+.book-now{animation:pulse 2.4s infinite ease-in-out}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.45)}50%{box-shadow:0 0 0 10px rgba(37,99,235,0)}}
+.hero{position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(180deg, rgba(10,35,66,.85), rgba(18,58,107,.9));color:#eaf2ff}
+.hero-content{position:relative;z-index:1;padding:2.2rem 0}
+.hero-logo-top{width:96px;height:96px;border-radius:50%;object-fit:cover;background:#fff;margin:0 auto 1rem auto;padding:.5rem}
+.hero-title{font-size:2.1rem;margin:.25rem 0 1rem 0;color:#ffffff}
+/* Bright offer banner */
+.promo-banner{background:linear-gradient(135deg,#FFCC00,#FF9900);color:#000;text-align:center;padding:.75rem 1rem;font-weight:900;letter-spacing:.3px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.18);width:fit-content;margin:.75rem auto 0}
+.section{padding:2.4rem 0}
+.section-title{color:var(--navy)}
+.lead{color:#334155;max-width:860px;margin:0 auto;text-align:center}
+.services{background:#eef4fb}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(16,24,40,.06);transition:transform .2s;display:flex;align-items:center;justify-content:center;min-height:160px}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:160px;object-fit:cover}
+.card h3{padding:1rem}
+.card.coming{opacity:.9}
+.tag{font-size:.85rem;color:var(--muted)}
+.ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:1rem}
+.ba-item{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(16,24,40,.08)}
+.ba-item img{width:100%;height:auto;display:block;object-fit:cover}
+.ba-item figcaption{padding:.6rem .9rem;font-weight:800;color:var(--navy)}
+.contact{background:linear-gradient(180deg,var(--navy),var(--navy-2));color:#e9eef6}
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:start}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:.35rem 0}
+.list a{color:#d2e7ff}
+.form{background:#0e2e58;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form label{display:flex;flex-direction:column;font-weight:600;font-size:.9rem;gap:.35rem}
+.form input,.form textarea{border-radius:8px;border:1px solid rgba(255,255,255,.2);background:#0b2545;color:#fff;padding:.7rem}
+.form input::placeholder,.form textarea::placeholder{color:#a6c0e6}
+.form .full{grid-column:1/-1}
+.form .submit{grid-column:1/-1;background:#00CFFF;color:#002532}
+.form-note{grid-column:1/-1;font-size:.8rem;color:#cfe3ff}
+.site-footer{background:#091a30;color:#cfe3ff;text-align:center;padding:1rem}
+@media (max-width:860px){.nav{display:none}.contact-grid{grid-template-columns:1fr}.hero-title{font-size:1.7rem}}
