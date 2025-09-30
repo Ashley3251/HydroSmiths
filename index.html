@@ -1,131 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HydroSmiths | Pressure Washing</title>
-  <meta name="description" content="HydroSmiths — Patio & exterior pressure washing. Where Pressure Meets Precision.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=40" />
-  <!-- use the exact filename (with a space) -->
-  <link rel="icon" type="image/png" href="./hydrosmiths logo.png">
-  <script defer src="./script.js?v=40"></script>
+  <title>HydroSmiths — Pressure Washing</title>
+  <meta name="description" content="Patio & exterior pressure washing for local homes. Where Pressure Meets Precision. 10% off your first clean — book today!" />
+  <link rel="preload" as="image" href="./hydrosmiths%20logo.png">
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Top bar / nav -->
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="wrap nav-row">
       <a class="brand" href="#home">
-        <img class="brand-logo" src="./hydrosmiths logo.png" alt="HydroSmiths logo">
-        <span class="brand-name">HydroSmiths</span>
+        <img src="./hydrosmiths%20logo.png" alt="HydroSmiths logo" class="brand-logo">
+        <span>HydroSmiths</span>
       </a>
-      <nav class="nav">
+
+      <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
-        <a href="#patios">Our Work</a>
+        <a href="#work">Our Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn book-now">Book Now</a>
       </nav>
+
+      <div class="nav-cta">
+        <a class="phone-link" href="tel:+447519589731">📞 07519 589731</a>
+        <a class="btn btn-primary" href="#contact">Book Now</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero / phrase -->
+  <!-- Hero -->
   <section id="home" class="hero">
-    <div class="container hero-content">
-      <img class="hero-logo-top" src="./hydrosmiths logo.png" alt="HydroSmiths badge">
-      <h1 class="hero-title">Where Pressure Meets Precision</h1>
-      <a class="btn cta" href="#contact">Get a Free Quote</a>
-    </div>
-    <div class="promo-banner"><strong>10% Off Your First Clean</strong> — Book Today!</div>
-  </section>
+    <div class="wrap hero-grid">
+      <div class="hero-badge">
+        <img src="./hydrosmiths%20logo.png" alt="" class="hero-logo" />
+      </div>
 
-  <!-- Services: tiles (no thumbnail on the tiles) -->
-  <section id="services" class="section services">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <div class="cards">
-        <a class="card card-link" href="#patios"><h3>Patios</h3></a>
-        <a class="card card-link" href="#driveways"><h3>Driveways</h3></a>
-        <a class="card card-link" href="#walls"><h3>Walls</h3></a>
-        <a class="card card-link" href="#roofs"><h3>Roofs</h3></a>
+      <div class="hero-copy">
+        <h1>Where Pressure Meets Precision</h1>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Get a Free Quote</a>
+          <span class="offer-pill">10% Off Your First Clean — Book Today!</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Galleries -->
-  <section id="patios" class="section gallery">
-    <div class="container">
-      <h2 class="section-title">Patio Cleaning</h2>
-      <p class="lead">Recent patio cleans from local customers.</p>
-      <div id="patio-grid" class="gallery-grid" aria-live="polite"></div>
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <h2 class="section-title">Our Services</h2>
+      <div class="cards">
+        <a class="card" href="#work"><h3>Patios</h3></a>
+        <a class="card" href="#work"><h3>Driveways</h3></a>
+        <a class="card" href="#work"><h3>Walls</h3></a>
+        <a class="card" href="#work"><h3>Roofs &amp; Guttering</h3></a>
+      </div>
     </div>
   </section>
 
-  <section id="driveways" class="section gallery">
-    <div class="container">
-      <h2 class="section-title">Driveway Cleaning</h2>
-      <p class="lead">Add photos any time — we’ll show them here automatically.</p>
-      <div id="driveway-grid" class="gallery-grid" aria-live="polite"></div>
-    </div>
-  </section>
+  <!-- Our Work (Galleries) -->
+  <section id="work" class="section alt">
+    <div class="wrap">
+      <h2 class="section-title">Our Work — Before &amp; After</h2>
 
-  <section id="walls" class="section gallery">
-    <div class="container">
-      <h2 class="section-title">Wall Cleaning</h2>
-      <p class="lead">Add photos any time — we’ll show them here automatically.</p>
-      <div id="wall-grid" class="gallery-grid" aria-live="polite"></div>
-    </div>
-  </section>
+      <!-- Patio gallery -->
+      <h3 class="gallery-title">Patio Cleaning</h3>
+      <p class="gallery-sub">Recent patio cleans from local customers.</p>
+      <div class="gallery" id="patio-gallery">
+        <!-- Thumbnails injected by script.js -->
+      </div>
 
-  <section id="roofs" class="section gallery">
-    <div class="container">
-      <h2 class="section-title">Roof Cleaning</h2>
-      <p class="lead">Add photos any time — we’ll show them here automatically.</p>
-      <div id="roof-grid" class="gallery-grid" aria-live="polite"></div>
+      <!-- Driveway / Walls / Roofs & Guttering placeholders (no “add photos” text) -->
+      <div class="grid-two">
+        <div>
+          <h3 class="gallery-title">Driveway Cleaning</h3>
+          <p class="coming">Photos coming soon.</p>
+        </div>
+        <div>
+          <h3 class="gallery-title">Wall Cleaning</h3>
+          <p class="coming">Photos coming soon.</p>
+        </div>
+        <div>
+          <h3 class="gallery-title">Roof &amp; Gutter Cleaning</h3>
+          <p class="coming">Photos coming soon.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2 class="section-title">About HydroSmiths</h2>
-      <p class="lead">We’re a local, reliable pressure washing team restoring patios (driveways, walls & roofs expanding soon) with safe, effective methods and pro equipment. Expect friendly service, fair pricing, and results that make your property shine.</p>
+  <section id="about" class="section">
+    <div class="wrap about-grid">
+      <div>
+        <h2 class="section-title">About HydroSmiths</h2>
+        <p>We’re a local, reliable pressure washing team restoring patios (driveways, walls &amp; roofs expanding soon) with safe, effective methods and pro equipment. Expect friendly service, fair pricing, and results that make your property shine.</p>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="section contact">
-    <div class="container contact-grid">
-      <div class="contact-info">
-        <h2 class="section-title light">Contact Us</h2>
-        <ul class="list">
-          <li><strong>Phone:</strong> <a href="tel:07519589731">07519 589731</a></li>
-          <li><strong>Email:</strong> <a href="mailto:hydrosmiths123@gmail.com">hydrosmiths123@gmail.com</a></li>
-          <li><strong>Facebook:</strong>
-            <a href="https://www.facebook.com/profile.php?id=61579866693542" target="_blank" rel="noopener noreferrer">
-              facebook.com/HydroSmiths
-            </a>
-          </li>
-        </ul>
+    <div class="wrap contact-grid">
+      <div class="contact-left">
+        <h2 class="section-title">Contact Us</h2>
+        <p><strong>Phone:</strong> <a href="tel:+447519589731">07519 589731</a></p>
+        <p><strong>Email:</strong> <a href="mailto:hydrosmiths123@gmail.com">hydrosmiths123@gmail.com</a></p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61579866693542" target="_blank" rel="noopener">facebook.com/HydroSmiths</a></p>
       </div>
-      <form action="https://formsubmit.co/hydrosmiths123@gmail.com" method="POST" class="form">
-        <input type="hidden" name="_subject" value="New enquiry from HydroSmiths website">
-        <input type="hidden" name="_template" value="table">
+
+      <form class="contact-form" action="https://formsubmit.co/hydrosmiths123@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://ashley3251.github.io/HydroSmiths/?sent=1">
-        <input type="text" name="_honey" style="display:none">
-        <label><span>Name</span><input type="text" name="name" required></label>
-        <label><span>Email</span><input type="email" name="email" required></label>
-        <label class="full"><span>Message</span><textarea name="message" rows="5" required></textarea></label>
-        <button type="submit" class="btn submit">Send Message</button>
-        <p class="form-note">Submitting sends an email straight to hydrosmiths123@gmail.com.</p>
+        <input type="hidden" name="_subject" value="New message from HydroSmiths website">
+        <input type="hidden" name="_template" value="table">
+        <label>
+          <span>Name</span>
+          <input required name="name" type="text" placeholder="Your name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input required name="email" type="email" placeholder="you@example.com" />
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea required name="message" rows="4" placeholder="How can we help?"></textarea>
+        </label>
+        <button class="btn btn-primary full" type="submit">Send Message</button>
+        <p class="small">Submitting sends an email straight to hydrosmiths123@gmail.com.</p>
       </form>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">© 2025 HydroSmiths — Proudly Serving Our Local Community</div>
+  <footer class="footer">
+    <div class="wrap">
+      © 2025 HydroSmiths — Proudly Serving Our Local Community
+    </div>
   </footer>
+
+  <!-- Lightbox (image zoom) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close (Esc)">×</button>
+    <img class="lightbox-img" alt="Expanded work photo" />
+    <div class="lightbox-caption"></div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
