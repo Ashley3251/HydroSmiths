@@ -1,22 +1,11 @@
-/* ---------- GALLERY SOURCES ----------
-   Put your images in the repo root or /assets and list them here.
-   The code hides any that 404 (so typos won’t break the page).
-*/
+/* ---------- GALLERY SOURCES ---------- */
 const patioImages = [
-  // your current files:
-  "./after1.jpg",
-  "./before1.jpg",
-  "./beforeandafter.jpg",
-  // If you add more later (recommended place: /assets/patios):
-  // "./assets/patios/patio2.jpg",
-  // "./assets/patios/patio3.jpg",
+  "./before1.jpg",       // show "before" first
+  "./after1.jpg",        // then "after"
+  "./beforeandafter.jpg" // extra photo
 ];
 
-const drivewayImages = [
-  // add driveway images here when you have them
-  // "./assets/driveways/drive1.jpg",
-];
-
+const drivewayImages = [];
 const wallImages = [];
 const roofImages = [];
 
@@ -26,7 +15,8 @@ function addImage(src, container){
   img.loading = "lazy";
   img.alt = "HydroSmiths job photo";
   img.src = src;
-  img.onerror = () => container.removeChild(img); // hide missing/typo images
+  img.onerror = () => container.removeChild(img);
+  img.addEventListener("click", () => openLightbox(src)); // zoom on click
   container.appendChild(img);
 }
 
@@ -40,6 +30,19 @@ function renderGallery(containerId, list){
   list.forEach(src => addImage(src, el));
 }
 
+/* ---------- LIGHTBOX ---------- */
+function openLightbox(src){
+  let overlay = document.createElement("div");
+  overlay.className = "lightbox-overlay";
+  overlay.innerHTML = `
+    <div class="lightbox-content">
+      <img src="${src}" alt="Zoomed photo">
+    </div>
+  `;
+  overlay.addEventListener("click", () => document.body.removeChild(overlay));
+  document.body.appendChild(overlay);
+}
+
 /* ---------- INIT ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   renderGallery('patio-grid', patioImages);
@@ -47,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderGallery('wall-grid', wallImages);
   renderGallery('roof-grid', roofImages);
 
-  // Smooth scroll for in-page links
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
       const id=a.getAttribute('href');
