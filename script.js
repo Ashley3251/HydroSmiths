@@ -1,13 +1,16 @@
-/* ---------- GALLERY SOURCES ---------- */
+/* ---------- GALLERY SOURCES ----------
+   Current patio files (repo root): before1.jpg, after1.jpg, beforeandafter.jpg
+   Add more later by pushing to arrays (or move to /assets/... and update paths).
+*/
 const patioImages = [
-  "./before1.jpg",       // show "before" first
-  "./after1.jpg",        // then "after"
-  "./beforeandafter.jpg" // extra photo
+  "./before1.jpg",        // BEFORE first
+  "./after1.jpg",         // AFTER second
+  "./beforeandafter.jpg", // extra
 ];
 
-const drivewayImages = [];
-const wallImages = [];
-const roofImages = [];
+const drivewayImages = []; // add later
+const wallImages = [];     // add later
+const roofImages = [];     // add later
 
 /* ---------- RENDER HELPERS ---------- */
 function addImage(src, container){
@@ -30,16 +33,47 @@ function renderGallery(containerId, list){
   list.forEach(src => addImage(src, el));
 }
 
-/* ---------- LIGHTBOX ---------- */
+/* ---------- LIGHTBOX (smaller + close button + ESC) ---------- */
 function openLightbox(src){
-  let overlay = document.createElement("div");
+  // lock background scroll
+  document.body.classList.add('no-scroll');
+
+  const overlay = document.createElement("div");
   overlay.className = "lightbox-overlay";
-  overlay.innerHTML = `
-    <div class="lightbox-content">
-      <img src="${src}" alt="Zoomed photo">
-    </div>
-  `;
-  overlay.addEventListener("click", () => document.body.removeChild(overlay));
+  overlay.setAttribute("role","dialog");
+  overlay.setAttribute("aria-modal","true");
+
+  const content = document.createElement("div");
+  content.className = "lightbox-content";
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "Zoomed photo";
+
+  const closeBtn = document.createElement("button");
+  closeBtn.className = "lightbox-close";
+  closeBtn.title = "Close (Esc)";
+  closeBtn.addEventListener("click", close);
+
+  content.appendChild(img);
+  content.appendChild(closeBtn);
+  overlay.appendChild(content);
+
+  // clicking outside image closes
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) close();
+  });
+
+  // ESC to close
+  function onKey(e){ if(e.key === "Escape") close(); }
+  document.addEventListener("keydown", onKey);
+
+  function close(){
+    document.body.classList.remove('no-scroll');
+    document.removeEventListener("keydown", onKey);
+    overlay.remove();
+  }
+
   document.body.appendChild(overlay);
 }
 
@@ -50,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderGallery('wall-grid', wallImages);
   renderGallery('roof-grid', roofImages);
 
+  // Smooth scroll for in-page links
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
       const id=a.getAttribute('href');
