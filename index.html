@@ -4,24 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HydroSmiths | Pressure Washing</title>
-  <meta name="description" content="HydroSmiths — Patio pressure washing for local customers. Where Pressure Meets Precision.">
+  <meta name="description" content="HydroSmiths — Patio & exterior pressure washing. Where Pressure Meets Precision.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=10" />
-  <!-- Favicon via RAW (matches your file name exactly) -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Ashley3251/HydroSmiths/main/Hydrosmiths_Logo.png">
-  <script defer src="./script.js?v=10"></script>
+  <link rel="stylesheet" href="./style.css?v=20" />
+  <link rel="icon" type="image/png" href="./hydrosmiths_logo.png">
+  <script defer src="./script.js?v=20"></script>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <img class="brand-logo" src="https://raw.githubusercontent.com/Ashley3251/HydroSmiths/main/Hydrosmiths_Logo.png" alt="HydroSmiths logo">
+      <a class="brand" href="#home">
+        <img class="brand-logo" src="./hydrosmiths_logo.png" alt="HydroSmiths logo">
         <span class="brand-name">HydroSmiths</span>
-      </div>
+      </a>
       <nav class="nav">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
+        <a href="#patios">Our Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#contact" class="btn book-now">Book Now</a>
@@ -29,61 +29,71 @@
     </div>
   </header>
 
+  <!-- Hero -->
   <section id="home" class="hero">
     <div class="container hero-content">
-      <img class="hero-logo-top" src="https://raw.githubusercontent.com/Ashley3251/HydroSmiths/main/Hydrosmiths_Logo.png" alt="HydroSmiths logo large">
+      <img class="hero-logo-top" src="./hydrosmiths_logo.png" alt="HydroSmiths badge">
       <h1 class="hero-title">Where Pressure Meets Precision</h1>
       <a class="btn cta" href="#contact">Get a Free Quote</a>
     </div>
     <div class="promo-banner"><strong>10% Off Your First Clean</strong> — Book Today!</div>
   </section>
 
+  <!-- Services -->
   <section id="services" class="section services">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
       <div class="cards">
-        <article class="card">
-          <!-- Services image (RAW URL to your after photo) -->
-          <img src="https://raw.githubusercontent.com/Ashley3251/HydroSmiths/main/after1.jpg.jpg" alt="Patio cleaning">
-          <h3>Patios</h3>
-        </article>
-        <article class="card coming"><h3>Driveways <span class="tag">Coming Soon</span></h3></article>
-        <article class="card coming"><h3>Walls <span class="tag">Coming Soon</span></h3></article>
-        <article class="card coming"><h3>Roofs <span class="tag">Coming Soon</span></h3></article>
+        <a class="card card-link" href="#patios"><h3>Patios</h3></a>
+        <a class="card card-link" href="#driveways"><h3>Driveways</h3></a>
+        <a class="card card-link" href="#walls"><h3>Walls</h3></a>
+        <a class="card card-link" href="#roofs"><h3>Roofs</h3></a>
       </div>
     </div>
   </section>
 
-  <section id="work" class="section work">
+  <!-- Galleries -->
+  <section id="patios" class="section gallery">
     <div class="container">
-      <h2 class="section-title">Before & After</h2>
-      <p class="lead">Swipe or drag to see more jobs.</p>
-
-      <div class="carousel" tabindex="0" aria-label="Before and after jobs carousel">
-        <div class="slide">
-          <figure class="pair">
-            <img src="https://raw.githubusercontent.com/Ashley3251/HydroSmiths/main/before1.jpg.jpg" alt="Before cleaning 1">
-            <figcaption>Before</figcaption>
-          </figure>
-          <figure class="pair">
-            <img src="https://raw.githubusercontent.com/Ashley3251/HydroSmiths/main/after1.jpg.jpg" alt="After cleaning 1">
-            <figcaption>After</figcaption>
-          </figure>
-        </div>
-        <!-- To add more pairs later, duplicate the block above and change filenames -->
-      </div>
-
-      <div class="dots" id="dots"></div>
+      <h2 class="section-title">Patio Cleaning</h2>
+      <p class="lead">Recent patio cleans from local customers.</p>
+      <div id="patio-grid" class="gallery-grid" aria-live="polite"></div>
     </div>
   </section>
 
+  <section id="driveways" class="section gallery">
+    <div class="container">
+      <h2 class="section-title">Driveway Cleaning</h2>
+      <p class="lead">Add photos any time — we’ll show them here automatically.</p>
+      <div id="driveway-grid" class="gallery-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="walls" class="section gallery">
+    <div class="container">
+      <h2 class="section-title">Wall Cleaning</h2>
+      <p class="lead">Add photos any time — we’ll show them here automatically.</p>
+      <div id="wall-grid" class="gallery-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="roofs" class="section gallery">
+    <div class="container">
+      <h2 class="section-title">Roof Cleaning</h2>
+      <p class="lead">Add photos any time — we’ll show them here automatically.</p>
+      <div id="roof-grid" class="gallery-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- About -->
   <section id="about" class="section about">
     <div class="container">
       <h2 class="section-title">About HydroSmiths</h2>
-      <p class="lead">We’re a local, reliable pressure washing team restoring patios (driveways & walls coming soon) with safe, effective techniques and top-tier equipment. Expect friendly service, fair pricing and results that make your property shine.</p>
+      <p class="lead">We’re a local, reliable pressure washing team restoring patios (driveways, walls & roofs expanding soon) with safe, effective methods and pro equipment. Expect friendly service, fair pricing, and results that make your property shine.</p>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="section contact">
     <div class="container contact-grid">
       <div class="contact-info">
