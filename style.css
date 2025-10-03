@@ -119,3 +119,7 @@ a:hover{opacity:.9}
 a, button, input, textarea{outline-offset:3px}
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{outline:3px solid var(--sky)}
 @media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
+.faq{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 14px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700;outline:0}
+.faq[open]{background:rgba(255,255,255,.05)}
+.faq p{margin:.6rem 0 0}
