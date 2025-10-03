@@ -1,53 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
   <url>
     <loc>https://ashley3251.github.io/HydroSmiths/</loc>
+    <lastmod>2025-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Services -->
   <url>
     <loc>https://ashley3251.github.io/HydroSmiths/#services</loc>
+    <lastmod>2025-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Patio Cleaning -->
   <url>
-    <loc>https://ashley3251.github.io/HydroSmiths/#patios</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Driveways -->
-  <url>
-    <loc>https://ashley3251.github.io/HydroSmiths/#driveways</loc>
+    <loc>https://ashley3251.github.io/HydroSmiths/#our-work</loc>
+    <lastmod>2025-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Walls -->
   <url>
-    <loc>https://ashley3251.github.io/HydroSmiths/#walls</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Roofs & Guttering -->
-  <url>
-    <loc>https://ashley3251.github.io/HydroSmiths/#roofs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Contact -->
-  <url>
-    <loc>https://ashley3251.github.io/HydroSmiths/#contact</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://ashley3251.github.io/HydroSmiths/#about</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
+  <url>
+    <loc>https://ashley3251.github.io/HydroSmiths/#contact</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
