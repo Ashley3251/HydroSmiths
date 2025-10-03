@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ashley3251.github.io/HydroSmiths/sitemap.xml
