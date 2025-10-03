@@ -123,3 +123,63 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .faq summary{cursor:pointer;font-weight:700;outline:0}
 .faq[open]{background:rgba(255,255,255,.05)}
 .faq p{margin:.6rem 0 0}
+/* ----------------------------- */
+/* Contact section – mobile fix  */
+/* ----------------------------- */
+
+#contact {
+  padding: 48px 0;
+  background: linear-gradient(180deg, #0b2d4d 0%, #0a243f 100%);
+}
+
+#contact .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Ensure any panels/cards in contact area never exceed the viewport */
+#contact .panel,
+#contact .card,
+#contact .contact-card,
+#contact .contact-info {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 14px;
+}
+
+/* Inputs and button span full width on small screens */
+#contact input,
+#contact textarea,
+#contact button {
+  width: 100%;
+}
+
+/* Make the layout single-column on mobile and kill any fixed widths */
+@media (max-width: 768px) {
+  #contact .grid,
+  #contact .flex {
+    display: block !important;         /* in case it was a fixed grid/row */
+  }
+
+  #contact .panel,
+  #contact .card,
+  #contact .contact-card,
+  #contact .contact-info,
+  #contact [class*="col"] {
+    margin: 0 0 16px 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Prevent any child from bleeding beyond the viewport */
+  #contact * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Comfortable textarea height on phones */
+  #contact textarea {
+    min-height: 140px;
+  }
+}
