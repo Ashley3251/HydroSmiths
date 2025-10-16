@@ -1,301 +1,411 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HydroSmiths — Driveway & Patio Cleaning in North Walsham</title>
-  <meta name="description" content="Professional driveway & patio cleaning in North Walsham. Where Pressure Meets Precision. 10% off your first clean — call or book today!" />
-  <link rel="preload" as="image" href="./hydrosmiths%20logo.png">
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="canonical" href="https://ashley3251.github.io/HydroSmiths/">
-  <link rel="icon" href="./hydrosmiths%20logo.png" type="image/png">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HydroSmiths — Driveway & Patio Cleaning in North Walsham</title>
+<meta name="description" content="Professional driveway & patio cleaning in North Walsham. Where Pressure Meets Precision. 10% off your first clean — call or book today!">
+<link rel="icon" href="./hydrosmiths%20logo.png" type="image/png">
+<link rel="canonical" href="https://ashley3251.github.io/HydroSmiths/">
 
-  <!-- Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="HydroSmiths — Driveway & Patio Cleaning in North Walsham">
-  <meta property="og:description" content="Local, reliable pressure washing for patios, driveways, walls and roofs. 10% off your first clean — book today!">
-  <meta property="og:url" content="https://ashley3251.github.io/HydroSmiths/">
-  <meta property="og:image" content="https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HydroSmiths — Driveway & Patio Cleaning in North Walsham">
-  <meta name="twitter:description" content="Local, reliable pressure washing. 10% off your first clean — book today!">
-  <meta name="twitter:image" content="https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png">
+<!-- Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="HydroSmiths — Driveway & Patio Cleaning in North Walsham">
+<meta property="og:description" content="Local, reliable pressure washing for patios, driveways, walls and roofs. 10% off your first clean — book today!">
+<meta property="og:url" content="https://ashley3251.github.io/HydroSmiths/">
+<meta property="og:image" content="https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HydroSmiths — Driveway & Patio Cleaning in North Walsham">
+<meta name="twitter:description" content="Local, reliable pressure washing. 10% off your first clean — book today!">
+<meta name="twitter:image" content="https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png">
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness","HomeAndConstructionBusiness"],
-        "name": "HydroSmiths",
-        "url": "https://ashley3251.github.io/HydroSmiths/",
-        "image": [
-          "https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png",
-          "https://ashley3251.github.io/HydroSmiths/before1.jpg",
-          "https://ashley3251.github.io/HydroSmiths/after1.jpg"
-        ],
-        "logo": "https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png",
-        "telephone": "+44 7519 589731",
-        "email": "hydrosmiths123@gmail.com",
-        "sameAs": ["https://www.facebook.com/profile.php?id=61579866693542"],
-        "areaServed": "North Walsham, United Kingdom",
-        "description": "Professional driveway & patio cleaning. Friendly service, fair pricing, great results.",
-        "priceRange": "££",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Exterior Cleaning",
-          "itemListElement": [
-            {"@type":"Offer","name":"Patio Cleaning"},
-            {"@type":"Offer","name":"Driveway Cleaning"},
-            {"@type":"Offer","name":"Wall Cleaning"},
-            {"@type":"Offer","name":"Roof & Gutter Cleaning"}
-          ]
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What do you clean?","acceptedAnswer":{"@type":"Answer","text":"We specialise in patio cleaning and are expanding to driveways, walls, and roofs & guttering."}},
-          {"@type":"Question","name":"How do I get a quote?","acceptedAnswer":{"@type":"Answer","text":"Use the contact form on our website, message us on Facebook, or call 07519 589731 for a fast, free quote."}},
-          {"@type":"Question","name":"Do you use chemicals?","acceptedAnswer":{"@type":"Answer","text":"We start with pressure-only cleaning using professional equipment. Where needed, we can use safe, appropriate treatments—always explained beforehand."}},
-          {"@type":"Question","name":"Are you insured?","acceptedAnswer":{"@type":"Answer","text":"Yes, we operate responsibly and can provide details on request."}},
-          {"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"We cover our local area. If you’re nearby, get in touch and we’ll confirm availability."}}
+<!-- Styles (mobile-first) -->
+<style>
+:root{
+  --navy:#0B2A4A; --navy-2:#0F3C73; --sky:#20b7ff;
+  --text:#E6EEF5; --muted:#A9B7C6; --card:#0F1624;
+  --bg:#0A0F18; --panel:#0E1523; --accent:#F5A524;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:#9eddff;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 14px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:1000;
+  background:linear-gradient(90deg,var(--navy),var(--navy-2));box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.nav-row{display:flex;align-items:center;gap:10px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
+.brand-logo{width:44px;height:44px;border-radius:50%}
+.nav-links{display:none}          /* hidden on mobile; enabled on desktop below */
+.nav-cta{display:flex;gap:8px;margin-left:auto}
+.phone-link{display:none}         /* hide on mobile to save space */
+.btn{display:inline-flex;align-items:center;justify-content:center;
+  border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
+.btn-primary{background:var(--sky);color:#00142a}
+.btn-outline{border:2px solid var(--sky);color:var(--sky);background:transparent}
+.btn-primary:hover,.btn-outline:hover{filter:brightness(1.08)}
+
+/* Hero */
+.hero{
+  background:
+    radial-gradient(1200px 600px at -10% -30%, rgba(255,255,255,.05), transparent 60%),
+    linear-gradient(135deg, #0a2441 0%, #143c6b 60%, #0b2a4a 100%);
+  padding:28px 0 16px;
+}
+.hero-grid{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center}
+.hero-logo{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 4px rgba(255,255,255,.1)}
+.hero-copy h1{margin:0 0 6px;font-size:clamp(24px,6vw,36px)}
+.hero-sub{margin:0 0 12px;color:#dbe8f6}
+.actions{display:grid;gap:10px}
+.actions .btn{width:100%} /* full-width CTAs on mobile */
+
+/* Proof & trust */
+.hero-proof{display:grid;gap:10px;margin-top:12px}
+.proof-pair{display:grid;grid-template-columns:1fr;gap:10px}
+.badge-wrap{position:relative}
+.img-badge{position:absolute;top:8px;left:8px;padding:6px 10px;border-radius:999px;
+  background:#fff;color:#00142a;font-weight:800;font-size:.82rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.img-badge.before{background:#ffd6d6}
+.img-badge.after{background:#d6ffdf}
+.trust-strip{display:grid;grid-auto-flow:row;gap:8px;justify-items:center;text-align:center;
+  background:linear-gradient(90deg,#0f2a3f,#0b1f30);border-radius:12px;padding:10px 12px}
+
+/* Sections */
+.section{padding:34px 0}
+.section.alt{background:var(--panel)}
+.section-title{margin:0 0 16px;font-size:clamp(20px,5vw,28px)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;min-height:78px;color:#fff}
+.card:hover{outline:2px solid rgba(32,183,255,.25)}
+.card h3{margin:0}
+
+/* Gallery grid */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.thumb{position:relative;border-radius:14px;overflow:hidden;background:#0b1322;cursor:pointer}
+.thumb img{width:100%;height:170px;object-fit:cover;transition:transform .25s ease}
+.thumb:hover img{transform:scale(1.03)}
+.thumb .badge{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.55);color:#fff;font-weight:700;border-radius:10px;padding:4px 8px;font-size:12px}
+
+/* About & Contact */
+.contact{background:linear-gradient(180deg, var(--navy) 0%, #0f2f53 100%)}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.contact-form{display:grid;grid-template-columns:1fr;gap:12px;background:rgba(0,0,0,.25);padding:16px;border-radius:14px}
+.contact-form label{display:flex;flex-direction:column;gap:6px}
+.contact-form input,.contact-form textarea,.contact-form select{
+  background:#07101c;border:1px solid rgba(255,255,255,.12);color:#e9f2fa;border-radius:10px;padding:12px;font-size:16px}
+.small{opacity:.85;margin:6px 0 0}
+
+/* Footer */
+.footer{padding:22px 0;background:#08101b;color:#c7d6e6;text-align:center;border-top:1px solid rgba(255,255,255,.05)}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;padding:20px;z-index:10000}
+.lightbox.open{display:flex}
+.lightbox-img{max-width:92vw;max-height:85vh;border-radius:12px;box-shadow:0 10px 60px rgba(0,0,0,.5)}
+.lightbox-close{position:absolute;top:14px;right:14px;font-size:28px;line-height:1;background:rgba(255,255,255,.15);border:0;border-radius:10px;color:#fff;padding:6px 10px;cursor:pointer}
+.lightbox-caption{margin-top:10px;color:#eaeef5;text-align:center}
+
+/* Sticky CTA (mobile) */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;gap:8px;
+  padding:8px;background:#071728cc;backdrop-filter:blur(6px)}
+.sticky-cta a{flex:1;text-align:center;padding:11px 10px;border-radius:10px;font-weight:800}
+.sticky-cta .call{background:var(--sky);color:#00142a}
+.sticky-cta .quote{border:2px solid #fff;color:#fff}
+body{padding-bottom:64px} /* keep content above sticky bar */
+
+/* Desktop enhancements */
+@media (min-width:768px){
+  .wrap{padding:0 16px}
+  .nav-links{display:flex;gap:18px;margin-left:auto}
+  .phone-link{display:inline-flex}
+  .hero{padding:46px 0 28px}
+  .hero-grid{grid-template-columns:110px 1fr;gap:18px}
+  .actions{grid-auto-flow:column;grid-auto-columns:max-content}
+  .actions .btn{width:auto}
+  .proof-pair{grid-template-columns:1fr 1fr}
+  .trust-strip{grid-auto-flow:column}
+  .cards{grid-template-columns:repeat(4,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .contact-grid{grid-template-columns:330px 1fr}
+}
+</style>
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness","HomeAndConstructionBusiness"],
+      "name": "HydroSmiths",
+      "url": "https://ashley3251.github.io/HydroSmiths/",
+      "image": [
+        "https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png",
+        "https://ashley3251.github.io/HydroSmiths/before1.jpg",
+        "https://ashley3251.github.io/HydroSmiths/after1.jpg"
+      ],
+      "logo": "https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png",
+      "telephone": "+44 7519 589731",
+      "email": "hydrosmiths123@gmail.com",
+      "sameAs": ["https://www.facebook.com/profile.php?id=61579866693542"],
+      "areaServed": "North Walsham, United Kingdom",
+      "description": "Professional driveway & patio cleaning. Friendly service, fair pricing, great results.",
+      "priceRange": "££",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Exterior Cleaning",
+        "itemListElement": [
+          {"@type":"Offer","name":"Patio Cleaning"},
+          {"@type":"Offer","name":"Driveway Cleaning"},
+          {"@type":"Offer","name":"Wall Cleaning"},
+          {"@type":"Offer","name":"Roof & Gutter Cleaning"}
         ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What do you clean?","acceptedAnswer":{"@type":"Answer","text":"We specialise in patio cleaning and are expanding to driveways, walls, and roofs & guttering."}},
+        {"@type":"Question","name":"How do I get a quote?","acceptedAnswer":{"@type":"Answer","text":"Use the contact form on our website, message us on Facebook, or call 07519 589731 for a fast, free quote."}},
+        {"@type":"Question","name":"Do you use chemicals?","acceptedAnswer":{"@type":"Answer","text":"We start with pressure-only cleaning using professional equipment. Where needed, we can use safe, appropriate treatments—always explained beforehand."}},
+        {"@type":"Question","name":"Are you insured?","acceptedAnswer":{"@type":"Answer","text":"Yes, we operate responsibly and can provide details on request."}},
+        {"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"We cover our local area. If you’re nearby, get in touch and we’ll confirm availability."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="wrap nav-row">
-      <a class="brand" href="#home">
-        <img src="./hydrosmiths%20logo.png" alt="HydroSmiths logo" class="brand-logo">
-        <span>HydroSmiths</span>
-      </a>
 
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="#home">
+      <img src="./hydrosmiths%20logo.png" alt="HydroSmiths logo" class="brand-logo">
+      <span>HydroSmiths</span>
+    </a>
 
-      <div class="nav-cta">
-        <a class="phone-link" href="tel:+447519589731">📞 07519 589731</a>
-        <a class="btn btn-primary btn-accent" href="tel:+447519589731">Call Now</a>
-      </div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="phone-link" href="tel:+447519589731">📞 07519 589731</a>
+      <a class="btn btn-primary" href="tel:+447519589731">Call Now</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-badge">
-        <img src="./hydrosmiths%20logo.png" alt="" class="hero-logo" />
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-badge"><img src="./hydrosmiths%20logo.png" alt="" class="hero-logo"></div>
+
+    <div class="hero-copy">
+      <h1>Driveway &amp; Patio Cleaning in North Walsham</h1>
+      <p class="hero-sub">Where Pressure Meets Precision — expert exterior cleaning with pro equipment. <strong>Get 10% off your first clean</strong> when you book today.</p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+447519589731" aria-label="Call HydroSmiths now for a free quote">📞 Call Now for a Free Quote</a>
+        <a class="btn btn-outline" href="#contact" aria-label="Open the quote form">💬 Get Free Quote Online</a>
       </div>
 
-      <div class="hero-copy">
-        <h1>Driveway &amp; Patio Cleaning in North Walsham</h1>
-        <p class="hero-sub">
-          Where Pressure Meets Precision — expert exterior cleaning with pro equipment.
-          <strong>Get 10% off your first clean</strong> when you book today.
-        </p>
-
-        <div class="actions">
-          <a class="btn btn-primary btn-accent" href="tel:+447519589731" aria-label="Call HydroSmiths now for a free quote">📞 Call Now for a Free Quote</a>
-          <a class="btn btn-outline" href="#contact" aria-label="Open the quote form">💬 Get Free Quote Online</a>
-        </div>
-
-        <!-- Proof & trust -->
-        <div class="hero-proof">
-          <div class="proof-pair" aria-label="Before and after cleaning example">
-            <div class="badge-wrap">
-              <img src="./before1.jpg" alt="Before cleaning — patio with moss and dirt">
-              <span class="img-badge before">Before</span>
-            </div>
-            <div class="badge-wrap">
-              <img src="./after1.jpg" alt="After cleaning — patio restored and bright">
-              <span class="img-badge after">After</span>
-            </div>
+      <div class="hero-proof">
+        <div class="proof-pair" aria-label="Before and after cleaning example">
+          <div class="badge-wrap">
+            <img src="./before1.jpg" alt="Before cleaning — patio with moss and dirt">
+            <span class="img-badge before">Before</span>
           </div>
-          <small>⭐⭐⭐⭐⭐ “Amazing job — driveway looks brand new again!” — Sarah J.</small>
-
-          <div class="trust-strip" role="list">
-            <span role="listitem">🎯 10% off first clean</span>
-            <span role="listitem">📍 Local North Walsham business</span>
-            <span role="listitem">🛡️ Fully insured</span>
-            <span role="listitem">⚡ Fast quotes & friendly service</span>
+          <div class="badge-wrap">
+            <img src="./after1.jpg" alt="After cleaning — patio restored and bright">
+            <span class="img-badge after">After</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+        <small>⭐⭐⭐⭐⭐ “Amazing job — driveway looks brand new again!” — Sarah J.</small>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="wrap">
-      <h2 class="section-title">Our Services</h2>
-      <div class="cards">
-        <a class="card" href="#work"><h3>Patios</h3></a>
-        <a class="card" href="#work"><h3>Driveways</h3></a>
-        <a class="card" href="#work"><h3>Walls</h3></a>
-        <a class="card" href="#work"><h3>Roof &amp; Gutter Cleaning</h3></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Work -->
-  <section id="work" class="section alt">
-    <div class="wrap">
-      <h2 class="section-title">Our Work — Before &amp; After</h2>
-
-      <h3 class="gallery-title">Patio Cleaning</h3>
-      <p class="gallery-sub">Recent patio cleans from local customers.</p>
-      <div class="gallery" id="patio-gallery"></div>
-
-      <div class="grid-two">
-        <div>
-          <h3 class="gallery-title">Driveway Cleaning</h3>
-          <p class="coming">Photos coming soon.</p>
-        </div>
-        <div>
-          <h3 class="gallery-title">Wall Cleaning</h3>
-          <p class="coming">Photos coming soon.</p>
-        </div>
-        <div>
-          <h3 class="gallery-title">Roof &amp; Gutter Cleaning</h3>
-          <p class="coming">Photos coming soon.</p>
+        <div class="trust-strip">
+          <span>🎯 10% off first clean</span>
+          <span>📍 Local North Walsham business</span>
+          <span>🛡️ Fully insured</span>
+          <span>⚡ Fast quotes & friendly service</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="wrap about-grid">
-      <div>
-        <h2 class="section-title">About HydroSmiths</h2>
-        <p>We’re a local, reliable pressure washing team serving North Walsham and surrounding areas, restoring patios (driveways, walls &amp; roofs expanding soon) with safe, effective methods and pro equipment. Expect friendly service, fair pricing, and results that make your property shine.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQs -->
-  <section id="faq" class="section">
-    <div class="wrap">
-      <h2 class="section-title">FAQs</h2>
-
-      <details class="faq">
-        <summary>What do you clean?</summary>
-        <p>We specialise in <strong>patio cleaning</strong> and we’re expanding to <strong>driveways</strong>, <strong>walls</strong>, and <strong>roofs &amp; guttering</strong>.</p>
-      </details>
-
-      <details class="faq">
-        <summary>How do I get a quote?</summary>
-        <p>Use the contact form below, message us on Facebook, or call <a href="tel:+447519589731">07519 589731</a> for a fast, free quote.</p>
-      </details>
-
-      <details class="faq">
-        <summary>Do you use chemicals?</summary>
-        <p>We start with pressure-only cleaning. If a treatment is helpful, we’ll explain it first and use safe, appropriate products.</p>
-      </details>
-
-      <details class="faq">
-        <summary>Are you insured?</summary>
-        <p>Yes—ask us for details any time.</p>
-      </details>
-
-      <details class="faq">
-        <summary>Which areas do you cover?</summary>
-        <p>We cover our local area; if you’re nearby, get in touch and we’ll confirm availability.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <div class="wrap contact-grid">
-      <div class="contact-left">
-        <h2 class="section-title">Get Your Free Quote</h2>
-        <p><strong>Phone:</strong> <a href="tel:+447519589731">07519 589731</a></p>
-        <p><strong>Email:</strong> <a href="mailto:hydrosmiths123@gmail.com">hydrosmiths123@gmail.com</a></p>
-        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61579866693542" target="_blank" rel="noopener">facebook.com/HydroSmiths</a></p>
-        <p class="small">💡 Calling is fastest for same-week availability.</p>
-      </div>
-
-      <form class="contact-form" action="https://formsubmit.co/hydrosmiths123@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New message from HydroSmiths website">
-        <input type="hidden" name="_template" value="table">
-
-        <label>
-          <span>Name</span>
-          <input required name="name" type="text" placeholder="Your name" />
-        </label>
-        <label>
-          <span>Email</span>
-          <input required name="email" type="email" placeholder="you@example.com" />
-        </label>
-        <label>
-          <span>Phone</span>
-          <input required name="phone" type="tel" placeholder="07…" />
-        </label>
-        <label>
-          <span>Postcode</span>
-          <input required name="postcode" type="text" placeholder="e.g. NR28 0XX" />
-        </label>
-        <label>
-          <span>Service</span>
-          <select name="service" required>
-            <option value="">Select a service…</option>
-            <option>Patio Cleaning</option>
-            <option>Driveway Cleaning</option>
-            <option>Wall Cleaning</option>
-            <option>Roof &amp; Gutter Cleaning</option>
-          </select>
-        </label>
-        <label class="full">
-          <span>Message</span>
-          <textarea required name="message" rows="4" placeholder="Tell us about the area, size, and any issues (moss, stains, etc.)"></textarea>
-        </label>
-        <button class="btn btn-primary btn-accent full" type="submit" id="cta-form-submit">Get My Free Quote</button>
-        <p class="small">No spam. No obligation. We’ll get back quickly with availability. <strong>10% off your first clean</strong> when you book online today.</p>
-      </form>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="wrap">© 2025 HydroSmiths — Proudly Serving Our Local Community</div>
-  </footer>
-
-  <!-- Sticky mobile call bar -->
-  <div class="sticky-cta" aria-label="Quick actions">
-    <a class="call" href="tel:+447519589731">📞 Call Now</a>
-    <a class="quote" href="#contact">💬 Get Quote</a>
   </div>
+</section>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close (Esc)">×</button>
-    <img class="lightbox-img" alt="Expanded work photo" />
-    <div class="lightbox-caption"></div>
+<section id="services" class="section">
+  <div class="wrap">
+    <h2 class="section-title">Our Services</h2>
+    <div class="cards">
+      <a class="card" href="#work"><h3>Patios</h3></a>
+      <a class="card" href="#work"><h3>Driveways</h3></a>
+      <a class="card" href="#work"><h3>Walls</h3></a>
+      <a class="card" href="#work"><h3>Roof &amp; Gutter Cleaning</h3></a>
+    </div>
   </div>
+</section>
 
-  <!-- Simple event tracking hooks (safe if gtag not present) -->
-  <script>
-    function track(n, p){ try{ if(window.gtag){ gtag('event', n, p||{}); } }catch(e){} }
-    document.addEventListener('click', (e)=>{
-      const el=e.target.closest('a,button'); if(!el) return;
-      if(el.tagName==='A' && (el.getAttribute('href')||'').startsWith('tel:')) track('click_call',{event_category:'engagement'});
-      if(el.id==='cta-form-submit') track('submit_quote',{event_category:'lead'});
-    }, true);
-  </script>
+<section id="work" class="section alt">
+  <div class="wrap">
+    <h2 class="section-title">Our Work — Before &amp; After</h2>
 
-  <script src="./script.js"></script>
+    <h3 class="gallery-title">Patio Cleaning</h3>
+    <p class="gallery-sub">Recent patio cleans from local customers.</p>
+    <div class="gallery" id="patio-gallery"></div>
+
+    <div class="cards" style="margin-top:18px">
+      <div class="card"><h3>Driveway Cleaning — photos coming soon</h3></div>
+      <div class="card"><h3>Wall Cleaning — photos coming soon</h3></div>
+      <div class="card"><h3>Roof &amp; Gutter — photos coming soon</h3></div>
+      <div class="card"><h3>More Projects — uploading</h3></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <h2 class="section-title">About HydroSmiths</h2>
+    <p>We’re a local, reliable pressure washing team serving North Walsham and surrounding areas, restoring patios (driveways, walls &amp; roofs expanding soon) with safe, effective methods and pro equipment. Expect friendly service, fair pricing, and results that make your property shine.</p>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="wrap">
+    <h2 class="section-title">FAQs</h2>
+    <details class="faq"><summary>What do you clean?</summary><p>We specialise in <strong>patio cleaning</strong> and we’re expanding to <strong>driveways</strong>, <strong>walls</strong>, and <strong>roofs &amp; guttering</strong>.</p></details>
+    <details class="faq"><summary>How do I get a quote?</summary><p>Use the contact form below, message us on Facebook, or call <a href="tel:+447519589731">07519 589731</a> for a fast, free quote.</p></details>
+    <details class="faq"><summary>Do you use chemicals?</summary><p>We start with pressure-only cleaning. If a treatment is helpful, we’ll explain it first and use safe, appropriate products.</p></details>
+    <details class="faq"><summary>Are you insured?</summary><p>Yes—ask us for details any time.</p></details>
+    <details class="faq"><summary>Which areas do you cover?</summary><p>We cover our local area; if you’re nearby, get in touch and we’ll confirm availability.</p></details>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="section-title">Get Your Free Quote</h2>
+      <p><strong>Phone:</strong> <a href="tel:+447519589731">07519 589731</a></p>
+      <p><strong>Email:</strong> <a href="mailto:hydrosmiths123@gmail.com">hydrosmiths123@gmail.com</a></p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61579866693542" target="_blank" rel="noopener">facebook.com/HydroSmiths</a></p>
+      <p class="small">💡 Calling is fastest for same-week availability.</p>
+    </div>
+
+    <form class="contact-form" action="https://formsubmit.co/hydrosmiths123@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New message from HydroSmiths website">
+      <input type="hidden" name="_template" value="table">
+      <label><span>Name</span><input required name="name" type="text" placeholder="Your name"></label>
+      <label><span>Email</span><input required name="email" type="email" placeholder="you@example.com"></label>
+      <label><span>Phone</span><input required name="phone" type="tel" placeholder="07…"></label>
+      <label><span>Postcode</span><input required name="postcode" type="text" placeholder="e.g. NR28 0XX"></label>
+      <label><span>Service</span>
+        <select name="service" required>
+          <option value="">Select a service…</option>
+          <option>Patio Cleaning</option>
+          <option>Driveway Cleaning</option>
+          <option>Wall Cleaning</option>
+          <option>Roof &amp; Gutter Cleaning</option>
+        </select>
+      </label>
+      <label class="full"><span>Message</span>
+        <textarea required name="message" rows="4" placeholder="Tell us about the area, size, and any issues (moss, stains, etc.)"></textarea>
+      </label>
+      <button class="btn btn-primary full" type="submit" id="cta-form-submit">Get My Free Quote</button>
+      <p class="small">No spam. No obligation. We’ll get back quickly with availability. <strong>10% off your first clean</strong> when you book online today.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">© 2025 HydroSmiths — Proudly Serving Our Local Community</div>
+</footer>
+
+<!-- Sticky mobile quick actions -->
+<div class="sticky-cta" aria-label="Quick actions">
+  <a class="call" href="tel:+447519589731">📞 Call Now</a>
+  <a class="quote" href="#contact">💬 Get Quote</a>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close (Esc)">×</button>
+  <img class="lightbox-img" alt="Expanded work photo">
+  <div class="lightbox-caption"></div>
+</div>
+
+<!-- Scripts -->
+<script>
+/* Smooth scroll with header offset */
+(function(){
+  const header = document.querySelector('.site-header');
+  const getH = () => (header ? header.getBoundingClientRect().height : 0);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const href = a.getAttribute('href');
+      if(!href || href === '#') return;
+      const id = href.slice(1);
+      const target = document.getElementById(id);
+      if(!target) return;
+      e.preventDefault();
+      const y = target.getBoundingClientRect().top + window.pageYOffset - (getH() + 10);
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      target.setAttribute('tabindex','-1'); target.focus({preventScroll:true});
+    });
+  });
+})();
+
+/* Gallery */
+const galleries = {
+  patio: [
+    { src: "./before1.jpg",  caption: "Patio — Before", badge:'before' },
+    { src: "./after1.jpg",   caption: "Patio — After",  badge:'after'  },
+    { src: "./beforeandafter.jpg", caption: "Patio — Clean finish", badge:'' }
+  ]
+};
+function renderGallery(id, items){
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.innerHTML = "";
+  items.forEach((it)=>{
+    const card = document.createElement('button');
+    card.className = 'thumb'; card.type='button'; card.setAttribute('aria-label', it.caption||'Work photo');
+    const badge = it.badge==='before' ? '<span class="badge">Before</span>' :
+                  it.badge==='after'  ? '<span class="badge">After</span>'  : '';
+    card.innerHTML = `<img loading="lazy" src="${it.src}" alt="${it.caption||'HydroSmiths work'}">${badge}`;
+    card.addEventListener('click', ()=>openLightbox(it.src, it.caption));
+    el.appendChild(card);
+  });
+}
+renderGallery('patio-gallery', galleries.patio);
+
+/* Lightbox */
+const lb = document.getElementById('lightbox');
+const lbImg = lb.querySelector('.lightbox-img');
+const lbCap = lb.querySelector('.lightbox-caption');
+const lbClose = lb.querySelector('.lightbox-close');
+let lastFocused=null;
+function openLightbox(src,cap){ lastFocused=document.activeElement; lbImg.src=src; lbCap.textContent=cap||''; lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); lbClose.focus();}
+function closeLightbox(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); lbImg.src=''; lbCap.textContent=''; if(lastFocused&&lastFocused.focus) lastFocused.focus();}
+lbClose.addEventListener('click', closeLightbox);
+lb.addEventListener('click', e=>{ if(e.target===lb) closeLightbox(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLightbox(); });
+
+/* Tiny tracking hooks (safe if gtag absent) */
+function track(n,p){ try{ if(window.gtag){ gtag('event',n,p||{}); } }catch(e){} }
+document.addEventListener('click',(e)=>{
+  const el=e.target.closest('a,button'); if(!el) return;
+  if(el.tagName==='A'&&(el.getAttribute('href')||'').startsWith('tel:')) track('click_call',{event_category:'engagement'});
+  if(el.id==='cta-form-submit') track('submit_quote',{event_category:'lead'});
+},true);
+</script>
 </body>
 </html>
