@@ -263,3 +263,28 @@ body{ padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
 /* Optional: soften section transition from hero to next panel */
 .hero + .section.alt{ border-top-left-radius: 22px; border-top-right-radius: 22px; }
+/* 1) Hide header Call button on phones (we already have the sticky bar) */
+@media (max-width: 540px){
+  .nav-cta .btn { display:none; }
+}
+
+/* 2) Slightly smaller hero spacing so the image appears without a big gap */
+@media (max-width: 540px){
+  .hero { padding-bottom: 6px; }
+}
+
+/* 3) Softer round corners on gallery cards and consistent shadow */
+.thumb { border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+
+/* 4) Tidy the "coming soon" cards: reduce text size slightly on phones */
+@media (max-width: 540px){
+  .cards .card h3 { font-size: 18px; line-height: 1.25; text-align: left; }
+}
+
+/* 5) Make FAQ summaries larger tap targets */
+.faq summary { padding: 10px 2px; font-size: 18px; }
+
+/* 6) Ensure sticky bar never overlaps the form submit button on tiny screens */
+@media (max-width: 360px){
+  body { padding-bottom: 74px; }
+}
