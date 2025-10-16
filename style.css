@@ -13,7 +13,8 @@
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;line-height:1.55}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;line-height:1.55}
 img{max-width:100%;display:block}
 a{color:var(--sky);text-decoration:none}
 a:hover{opacity:.9}
@@ -37,6 +38,12 @@ a:hover{opacity:.9}
 .btn-primary{background:var(--sky);color:#00263d}
 .btn-primary:hover{filter:saturate(1.1)}
 
+/* NEW: accent + outline variants */
+.btn-accent{background:#20b7ff;color:#00142a!important;font-weight:800}
+.btn-accent:hover{filter:brightness(1.08)}
+.btn-outline{border:2px solid #20b7ff;color:#20b7ff;background:transparent;font-weight:800;border-radius:12px;padding:10px 14px}
+.btn-outline:hover{background:#20b7ff;color:#00142a}
+
 @media (max-width:860px){
   .nav-links{display:none}
   .nav-cta{margin-left:auto}
@@ -52,13 +59,34 @@ a:hover{opacity:.9}
 .hero-grid{display:grid;grid-template-columns:110px 1fr;align-items:center;gap:18px}
 .hero-badge{display:flex;align-items:center;justify-content:center}
 .hero-logo{width:84px;height:84px;border-radius:50%;box-shadow:0 0 0 6px rgba(255,255,255,.08)}
-.hero-copy h1{margin:0 0 12px;font-size:clamp(26px,4.8vw,42px)}
+.hero-copy h1{margin:0 0 8px;font-size:clamp(26px,4.6vw,42px)}
+.hero-sub{margin:0 0 12px;color:#d9e8f7;max-width:45ch}
 .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .offer-pill{background:var(--accent);color:#2b1900;padding:10px 14px;border-radius:12px;font-weight:800}
+
+/* NEW: proof + trust block */
+.hero-proof{display:grid;gap:12px;margin-top:14px}
+.proof-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.proof-pair img{width:100%;height:auto;border-radius:12px}
+.trust-strip{display:grid;grid-auto-flow:column;gap:12px;align-items:center;
+  background:linear-gradient(90deg,#0f2a3f,#0b1f30);color:#fff;border-radius:12px;
+  padding:10px 14px;font-size:.95rem}
+.trust-strip span{display:flex;gap:8px;align-items:center;white-space:nowrap}
+
+/* NEW: before/after badges */
+.badge-wrap{position:relative}
+.img-badge{
+  position:absolute;top:10px;left:10px;padding:6px 10px;border-radius:999px;
+  font-size:.85rem;font-weight:800;color:#00142a;background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.15)
+}
+.img-badge.before{background:#ffd6d6}
+.img-badge.after{background:#d6ffdf}
 
 @media (max-width:640px){
   .hero-grid{grid-template-columns:1fr;justify-items:start}
   .hero-badge{justify-content:flex-start}
+  .proof-pair{grid-template-columns:1fr}
 }
 
 /* Sections */
@@ -66,7 +94,7 @@ a:hover{opacity:.9}
 .section.alt{background:var(--panel)}
 .section-title{margin:0 0 18px;font-size:clamp(22px,3.6vw,28px)}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.card{background:var(--card);padding:22px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;min-height:90px;color:#fff;box-shadow:0 1px 0 rgba(0,0,0,.3)}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;min-height:84px;color:#fff;box-shadow:0 1px 0 rgba(0,0,0,.3)}
 .card:hover{outline:2px solid rgba(0,207,255,.2)}
 .card h3{margin:0}
 
@@ -99,7 +127,7 @@ a:hover{opacity:.9}
 .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:rgba(0,0,0,.25);padding:16px;border-radius:14px}
 .contact-form label{display:flex;flex-direction:column;gap:6px}
 .contact-form .full{grid-column:1/-1}
-.contact-form input, .contact-form textarea{
+.contact-form input, .contact-form textarea, .contact-form select{
   background:#07101c;border:1px solid rgba(255,255,255,.08);color:#e9f2fa;border-radius:10px;padding:10px
 }
 .small{opacity:.8;margin:6px 0 0}
@@ -123,63 +151,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .faq summary{cursor:pointer;font-weight:700;outline:0}
 .faq[open]{background:rgba(255,255,255,.05)}
 .faq p{margin:.6rem 0 0}
-/* ----------------------------- */
-/* Contact section – mobile fix  */
-/* ----------------------------- */
 
-#contact {
-  padding: 48px 0;
-  background: linear-gradient(180deg, #0b2d4d 0%, #0a243f 100%);
-}
-
-#contact .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* Ensure any panels/cards in contact area never exceed the viewport */
-#contact .panel,
-#contact .card,
-#contact .contact-card,
-#contact .contact-info {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 14px;
-}
-
-/* Inputs and button span full width on small screens */
-#contact input,
-#contact textarea,
-#contact button {
-  width: 100%;
-}
-
-/* Make the layout single-column on mobile and kill any fixed widths */
-@media (max-width: 768px) {
-  #contact .grid,
-  #contact .flex {
-    display: block !important;         /* in case it was a fixed grid/row */
+/* Contact section – mobile fix */
+#contact { padding:48px 0; background: linear-gradient(180deg, #0b2d4d 0%, #0a243f 100%); }
+#contact .container { max-width:1100px; margin:0 auto; padding:0 16px; }
+#contact .panel, #contact .card, #contact .contact-card, #contact .contact-info { width:100%; max-width:100%; border-radius:14px; }
+#contact input, #contact textarea, #contact button { width:100%; }
+@media (max-width:768px){
+  #contact .grid, #contact .flex { display:block !important; }
+  #contact .panel, #contact .card, #contact .contact-card, #contact .contact-info, #contact [class*="col"] {
+    margin:0 0 16px 0 !important; width:100% !important; max-width:100% !important;
   }
-
-  #contact .panel,
-  #contact .card,
-  #contact .contact-card,
-  #contact .contact-info,
-  #contact [class*="col"] {
-    margin: 0 0 16px 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Prevent any child from bleeding beyond the viewport */
-  #contact * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Comfortable textarea height on phones */
-  #contact textarea {
-    min-height: 140px;
-  }
+  #contact * { max-width:100%; box-sizing:border-box; }
+  #contact textarea { min-height:140px; }
 }
+
+/* NEW: sticky mobile bar */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;gap:8px;
+  padding:10px;background:#071728cc;backdrop-filter:blur(6px)
+}
+.sticky-cta a{flex:1;text-align:center;padding:12px 10px;border-radius:10px;font-weight:800}
+.sticky-cta .call{background:#20b7ff;color:#00142a}
+.sticky-cta .quote{border:2px solid #fff;color:#fff}
+@media (max-width:820px){ .sticky-cta{display:flex} }
+/* leave a little space so sticky bar doesn't cover content */
+body{padding-bottom:74px}
