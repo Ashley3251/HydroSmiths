@@ -407,5 +407,21 @@ document.addEventListener('click',(e)=>{
   if(el.id==='cta-form-submit') track('submit_quote',{event_category:'lead'});
 },true);
 </script>
+  <script>
+  // When clicking Get Quote, offset scroll a bit so the sticky bar doesn't cover the form header
+  document.querySelectorAll('a[href="#contact"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const el = document.getElementById('contact');
+      if(!el) return;
+      e.preventDefault();
+      const sticky = document.querySelector('.sticky-cta');
+      const offset = (sticky ? sticky.getBoundingClientRect().height : 0) + 14;
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      el.setAttribute('tabindex','-1'); el.focus({preventScroll:true});
+    });
+  });
+</script>
+
 </body>
 </html>
