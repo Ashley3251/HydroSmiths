@@ -5,19 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>HydroSmiths — Driveway & Patio Cleaning in North Walsham</title>
 <meta name="description" content="Professional driveway & patio cleaning in North Walsham. Where Pressure Meets Precision. 10% off your first clean — call or book today!">
-<link rel="icon" href="./hydrosmiths%20logo.png" type="image/png">
-<link rel="canonical" href="https://ashley3251.github.io/HydroSmiths/">
+
+<!-- Favicon & App Icons -->
+<link rel="icon" href="https://www.hydro-smiths.com/hydrosmiths%20logo.png" type="image/png">
+<link rel="apple-touch-icon" href="https://www.hydro-smiths.com/hydrosmiths%20logo.png">
+<link rel="canonical" href="https://www.hydro-smiths.com/">
+<link rel="preload" as="image" href="https://www.hydro-smiths.com/hydrosmiths%20logo.png">
 
 <!-- Social -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="HydroSmiths — Driveway & Patio Cleaning in North Walsham">
 <meta property="og:description" content="Local, reliable pressure washing for patios, driveways, walls and roofs. 10% off your first clean — book today!">
-<meta property="og:url" content="https://ashley3251.github.io/HydroSmiths/">
-<meta property="og:image" content="https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png">
+<meta property="og:url" content="https://www.hydro-smiths.com/">
+<meta property="og:image" content="https://www.hydro-smiths.com/hydrosmiths%20logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="HydroSmiths — Driveway & Patio Cleaning in North Walsham">
 <meta name="twitter:description" content="Local, reliable pressure washing. 10% off your first clean — book today!">
-<meta name="twitter:image" content="https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png">
+<meta name="twitter:image" content="https://www.hydro-smiths.com/hydrosmiths%20logo.png">
 
 <!-- Styles (mobile-first) -->
 <style>
@@ -40,9 +44,9 @@ a{color:#9eddff;text-decoration:none}
 .nav-row{display:flex;align-items:center;gap:10px;padding:10px 0}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
 .brand-logo{width:44px;height:44px;border-radius:50%}
-.nav-links{display:none}          /* hidden on mobile; enabled on desktop below */
+.nav-links{display:none}
 .nav-cta{display:flex;gap:8px;margin-left:auto}
-.phone-link{display:none}         /* hide on mobile to save space */
+.phone-link{display:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;
   border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
 .btn-primary{background:var(--sky);color:#00142a}
@@ -61,7 +65,7 @@ a{color:#9eddff;text-decoration:none}
 .hero-copy h1{margin:0 0 6px;font-size:clamp(24px,6vw,36px)}
 .hero-sub{margin:0 0 12px;color:#dbe8f6}
 .actions{display:grid;gap:10px}
-.actions .btn{width:100%} /* full-width CTAs on mobile */
+.actions .btn{width:100%}
 
 /* Proof & trust */
 .hero-proof{display:grid;gap:10px;margin-top:12px}
@@ -115,7 +119,7 @@ a{color:#9eddff;text-decoration:none}
 .sticky-cta a{flex:1;text-align:center;padding:11px 10px;border-radius:10px;font-weight:800}
 .sticky-cta .call{background:var(--sky);color:#00142a}
 .sticky-cta .quote{border:2px solid #fff;color:#fff}
-body{padding-bottom:64px} /* keep content above sticky bar */
+body{padding-bottom:64px}
 
 /* Desktop enhancements */
 @media (min-width:768px){
@@ -141,17 +145,24 @@ body{padding-bottom:64px} /* keep content above sticky bar */
   "@graph": [
     {
       "@type": ["LocalBusiness","HomeAndConstructionBusiness"],
+      "@id": "https://www.hydro-smiths.com/#org",
       "name": "HydroSmiths",
-      "url": "https://ashley3251.github.io/HydroSmiths/",
+      "url": "https://www.hydro-smiths.com/",
       "image": [
-        "https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png",
-        "https://ashley3251.github.io/HydroSmiths/before1.jpg",
-        "https://ashley3251.github.io/HydroSmiths/after1.jpg"
+        "https://www.hydro-smiths.com/hydrosmiths%20logo.png",
+        "https://www.hydro-smiths.com/before1.jpg",
+        "https://www.hydro-smiths.com/after1.jpg"
       ],
-      "logo": "https://ashley3251.github.io/HydroSmiths/hydrosmiths%20logo.png",
+      "logo": "https://www.hydro-smiths.com/hydrosmiths%20logo.png",
       "telephone": "+44 7519 589731",
       "email": "hydrosmiths123@gmail.com",
       "sameAs": ["https://www.facebook.com/profile.php?id=61579866693542"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "North Walsham",
+        "addressRegion": "Norfolk",
+        "addressCountry": "GB"
+      },
       "areaServed": "North Walsham, United Kingdom",
       "description": "Professional driveway & patio cleaning. Friendly service, fair pricing, great results.",
       "priceRange": "££",
@@ -407,20 +418,20 @@ document.addEventListener('click',(e)=>{
   if(el.id==='cta-form-submit') track('submit_quote',{event_category:'lead'});
 },true);
 </script>
-  <script>
-  // When clicking Get Quote, offset scroll a bit so the sticky bar doesn't cover the form header
-  document.querySelectorAll('a[href="#contact"]').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      const el = document.getElementById('contact');
-      if(!el) return;
-      e.preventDefault();
-      const sticky = document.querySelector('.sticky-cta');
-      const offset = (sticky ? sticky.getBoundingClientRect().height : 0) + 14;
-      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-      el.setAttribute('tabindex','-1'); el.focus({preventScroll:true});
-    });
+<script>
+// Offset scroll for the sticky bar on "Get Quote"
+document.querySelectorAll('a[href="#contact"]').forEach(a=>{
+  a.addEventListener('click', (e)=>{
+    const el = document.getElementById('contact');
+    if(!el) return;
+    e.preventDefault();
+    const sticky = document.querySelector('.sticky-cta');
+    const offset = (sticky ? sticky.getBoundingClientRect().height : 0) + 14;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    el.setAttribute('tabindex','-1'); el.focus({preventScroll:true});
   });
+});
 </script>
 
 </body>
