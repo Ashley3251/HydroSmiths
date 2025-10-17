@@ -1,16 +1,12 @@
-<!doctype html>
+<!doctype html> 
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>HydroSmiths — Driveway & Patio Cleaning in North Walsham</title>
 <meta name="description" content="Professional driveway & patio cleaning in North Walsham. Where Pressure Meets Precision. 10% off your first clean — call or book today!">
-
-<!-- Favicon & App Icons -->
 <link rel="icon" href="https://www.hydro-smiths.com/hydrosmiths%20logo.png" type="image/png">
-<link rel="apple-touch-icon" href="https://www.hydro-smiths.com/hydrosmiths%20logo.png">
 <link rel="canonical" href="https://www.hydro-smiths.com/">
-<link rel="preload" as="image" href="https://www.hydro-smiths.com/hydrosmiths%20logo.png">
 
 <!-- Social -->
 <meta property="og:type" content="website">
@@ -44,13 +40,13 @@ a{color:#9eddff;text-decoration:none}
 .nav-row{display:flex;align-items:center;gap:10px;padding:10px 0}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
 .brand-logo{width:44px;height:44px;border-radius:50%}
-.nav-links{display:none}
+.nav-links{display:none}          /* hidden on mobile; enabled on desktop below */
 .nav-cta{display:flex;gap:8px;margin-left:auto}
-.phone-link{display:none}
+.phone-link{display:none}         /* hide on mobile to save space */
 .btn{display:inline-flex;align-items:center;justify-content:center;
   border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
 .btn-primary{background:var(--sky);color:#00142a}
-.btn-outline{border:2px solid var(--sky);color:var(--sky);background:transparent}
+.btn-outline{border:2px solid var(--sky);color:#20b7ff;background:transparent}
 .btn-primary:hover,.btn-outline:hover{filter:brightness(1.08)}
 
 /* Hero */
@@ -65,7 +61,7 @@ a{color:#9eddff;text-decoration:none}
 .hero-copy h1{margin:0 0 6px;font-size:clamp(24px,6vw,36px)}
 .hero-sub{margin:0 0 12px;color:#dbe8f6}
 .actions{display:grid;gap:10px}
-.actions .btn{width:100%}
+.actions .btn{width:100%} /* full-width CTAs on mobile */
 
 /* Proof & trust */
 .hero-proof{display:grid;gap:10px;margin-top:12px}
@@ -119,7 +115,7 @@ a{color:#9eddff;text-decoration:none}
 .sticky-cta a{flex:1;text-align:center;padding:11px 10px;border-radius:10px;font-weight:800}
 .sticky-cta .call{background:var(--sky);color:#00142a}
 .sticky-cta .quote{border:2px solid #fff;color:#fff}
-body{padding-bottom:64px}
+body{padding-bottom:64px} /* keep content above sticky bar */
 
 /* Desktop enhancements */
 @media (min-width:768px){
@@ -145,7 +141,6 @@ body{padding-bottom:64px}
   "@graph": [
     {
       "@type": ["LocalBusiness","HomeAndConstructionBusiness"],
-      "@id": "https://www.hydro-smiths.com/#org",
       "name": "HydroSmiths",
       "url": "https://www.hydro-smiths.com/",
       "image": [
@@ -157,12 +152,6 @@ body{padding-bottom:64px}
       "telephone": "+44 7519 589731",
       "email": "hydrosmiths123@gmail.com",
       "sameAs": ["https://www.facebook.com/profile.php?id=61579866693542"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "North Walsham",
-        "addressRegion": "Norfolk",
-        "addressCountry": "GB"
-      },
       "areaServed": "North Walsham, United Kingdom",
       "description": "Professional driveway & patio cleaning. Friendly service, fair pricing, great results.",
       "priceRange": "££",
@@ -197,7 +186,7 @@ body{padding-bottom:64px}
 <header class="site-header">
   <div class="wrap nav-row">
     <a class="brand" href="#home">
-      <img src="./hydrosmiths%20logo.png" alt="HydroSmiths logo" class="brand-logo">
+      <img src="./hydrosmiths%20logo.png" alt="HydroSmiths pressure washing logo — North Walsham" class="brand-logo">
       <span>HydroSmiths</span>
     </a>
 
@@ -218,7 +207,9 @@ body{padding-bottom:64px}
 
 <section id="home" class="hero">
   <div class="wrap hero-grid">
-    <div class="hero-badge"><img src="./hydrosmiths%20logo.png" alt="" class="hero-logo"></div>
+    <div class="hero-badge">
+      <img src="./hydrosmiths%20logo.png" alt="HydroSmiths logo — driveway & patio cleaning in North Walsham" class="hero-logo">
+    </div>
 
     <div class="hero-copy">
       <h1>Driveway &amp; Patio Cleaning in North Walsham</h1>
@@ -232,11 +223,11 @@ body{padding-bottom:64px}
       <div class="hero-proof">
         <div class="proof-pair" aria-label="Before and after cleaning example">
           <div class="badge-wrap">
-            <img src="./before1.jpg" alt="Before cleaning — patio with moss and dirt">
+            <img src="./before1.jpg" alt="Patio before pressure washing — HydroSmiths North Walsham" />
             <span class="img-badge before">Before</span>
           </div>
           <div class="badge-wrap">
-            <img src="./after1.jpg" alt="After cleaning — patio restored and bright">
+            <img src="./after1.jpg" alt="Patio after pressure washing — HydroSmiths North Walsham" />
             <span class="img-badge after">After</span>
           </div>
         </div>
@@ -252,7 +243,6 @@ body{padding-bottom:64px}
     </div>
   </div>
 </section>
-
 <section id="services" class="section">
   <div class="wrap">
     <h2 class="section-title">Our Services</h2>
@@ -349,7 +339,7 @@ body{padding-bottom:64px}
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox" aria-hidden="true">
   <button class="lightbox-close" aria-label="Close (Esc)">×</button>
-  <img class="lightbox-img" alt="Expanded work photo">
+  <img class="lightbox-img" alt="Expanded before-and-after cleaning photo — HydroSmiths North Walsham">
   <div class="lightbox-caption"></div>
 </div>
 
@@ -377,9 +367,9 @@ body{padding-bottom:64px}
 /* Gallery */
 const galleries = {
   patio: [
-    { src: "./before1.jpg",  caption: "Patio — Before", badge:'before' },
-    { src: "./after1.jpg",   caption: "Patio — After",  badge:'after'  },
-    { src: "./beforeandafter.jpg", caption: "Patio — Clean finish", badge:'' }
+    { src: "./before1.jpg",  caption: "Patio before pressure washing — HydroSmiths North Walsham", badge:'before' },
+    { src: "./after1.jpg",   caption: "Patio after pressure washing — HydroSmiths North Walsham",  badge:'after'  },
+    { src: "./beforeandafter.jpg", caption: "Patio clean finish — driveway & patio cleaning in North Walsham by HydroSmiths", badge:'' }
   ]
 };
 function renderGallery(id, items){
@@ -388,10 +378,10 @@ function renderGallery(id, items){
   el.innerHTML = "";
   items.forEach((it)=>{
     const card = document.createElement('button');
-    card.className = 'thumb'; card.type='button'; card.setAttribute('aria-label', it.caption||'Work photo');
+    card.className = 'thumb'; card.type='button'; card.setAttribute('aria-label', it.caption||'HydroSmiths cleaning photo');
     const badge = it.badge==='before' ? '<span class="badge">Before</span>' :
                   it.badge==='after'  ? '<span class="badge">After</span>'  : '';
-    card.innerHTML = `<img loading="lazy" src="${it.src}" alt="${it.caption||'HydroSmiths work'}">${badge}`;
+    card.innerHTML = `<img loading="lazy" src="${it.src}" alt="${it.caption||'HydroSmiths pressure washing in North Walsham'}">${badge}`;
     card.addEventListener('click', ()=>openLightbox(it.src, it.caption));
     el.appendChild(card);
   });
@@ -419,7 +409,7 @@ document.addEventListener('click',(e)=>{
 },true);
 </script>
 <script>
-// Offset scroll for the sticky bar on "Get Quote"
+// When clicking Get Quote, offset scroll a bit so the sticky bar doesn't cover the form header
 document.querySelectorAll('a[href="#contact"]').forEach(a=>{
   a.addEventListener('click', (e)=>{
     const el = document.getElementById('contact');
