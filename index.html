@@ -42,150 +42,286 @@
     }
   </script>
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness","HomeAndConstructionBusiness"],
-        "name": "HydroSmiths",
-        "url": "https://www.hydro-smiths.com/",
-        "image": [
-          "https://www.hydro-smiths.com/hydrosmiths%20logo.png",
-          "https://www.hydro-smiths.com/before1.jpg",
-          "https://www.hydro-smiths.com/after1.jpg"
-        ],
-        "logo": "https://www.hydro-smiths.com/hydrosmiths%20logo.png",
-        "telephone": "+44 7519 589731",
-        "email": "hydrosmiths123@gmail.com",
-        "sameAs": ["https://www.facebook.com/profile.php?id=61579866693542"],
-        "areaServed": "North Walsham, United Kingdom",
-        "description": "Professional driveway & patio cleaning. Friendly service, fair pricing, great results.",
-        "priceRange": "££",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Exterior Cleaning",
-          "itemListElement": [
-            {"@type":"Offer","name":"Patio Cleaning"},
-            {"@type":"Offer","name":"Driveway Cleaning"},
-            {"@type":"Offer","name":"Wall Cleaning"},
-            {"@type":"Offer","name":"Roof & Gutter Cleaning"}
-          ]
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What do you clean?","acceptedAnswer":{"@type":"Answer","text":"We specialise in patio cleaning and are expanding to driveways, walls, and roofs & guttering."}},
-          {"@type":"Question","name":"How do I get a quote?","acceptedAnswer":{"@type":"Answer","text":"Use the contact form on our website, message us on Facebook, or call 07519 589731 for a fast, free quote."}},
-          {"@type":"Question","name":"Do you use chemicals?","acceptedAnswer":{"@type":"Answer","text":"We start with pressure-only cleaning using professional equipment. Where needed, we use safe, appropriate treatments—always explained beforehand."}},
-          {"@type":"Question","name":"Are you insured?","acceptedAnswer":{"@type":"Answer","text":"Yes, we operate responsibly and can provide details on request."}},
-          {"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"We cover our local area. If you’re nearby, get in touch and we’ll confirm availability."}}
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <!-- ===== Styles (inline so it can't fail to load) ===== -->
+  <!-- ====== INLINE CSS (yours) ====== -->
   <style>
-    /* Base */
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Noto Sans;line-height:1.5;color:#0b1620;background:#fff}
-    img{max-width:100%;height:auto;display:block}
-    a{color:#0b5fff;text-decoration:none}
-    a:hover,a:focus{text-decoration:underline}
-    .wrap{width:min(1100px,100% - 32px);margin-inline:auto}
-    .section{padding:48px 0}
-    .section.alt{background:#f6f8fb}
-    .section-title{font-size:1.6rem;margin:0 0 16px}
+  /* =========================
+     HydroSmiths — Global CSS
+     (cleaned + mobile polish)
+     ========================= */
 
-    /* Buttons */
-    .btn{display:inline-block;padding:12px 16px;border:2px solid transparent;border-radius:10px;font-weight:700;text-align:center}
-    .btn-primary{background:#0b5fff;color:#fff}
-    .btn-primary:hover{filter:brightness(.95);text-decoration:none}
-    .btn-outline{border-color:#0b5fff;color:#0b5fff;background:#fff}
-    .btn-outline:hover{background:#eef4ff;text-decoration:none}
-    .small{font-size:.92rem;color:#445}
+  :root{
+    --navy:#0B2A4A;
+    --navy-2:#0F3C73;
+    --sky:#00CFFF;
+    --ink:#0B1220;
+    --text:#E6EEF5;
+    --card:#0F1624;
+    --muted:#A9B7C6;
+    --accent:#F5A524; /* 10% off badge */
+    --bg:#0A0F18;
+    --panel:#0E1523;
+    --radius:16px;
+  }
+
+  /* Base */
+  *{box-sizing:border-box}
+  html,body{
+    margin:0; padding:0; background:var(--bg); color:var(--text);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+    line-height:1.55;
+  }
+  img{max-width:100%; height:auto; display:block}
+  a{color:var(--sky); text-decoration:none}
+  a:hover{opacity:.9}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 16px}
+
+  /* Header */
+  .site-header{
+    position:sticky; top:0; z-index:50;
+    background:linear-gradient(90deg,var(--navy) 0%, var(--navy-2) 100%);
+    box-shadow:0 2px 0 rgba(0,0,0,.2);
+  }
+  .nav-row{display:flex; align-items:center; gap:16px; padding:10px 0}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; color:#fff}
+  .brand-logo{width:28px; height:28px; border-radius:50%; object-fit:cover}
+  .nav-links{display:flex; gap:18px; margin-left:auto}
+  .nav-links a{color:#cfe6ff}
+  .nav-cta{display:flex; gap:10px; flex-wrap:wrap}
+  .phone-link{background:#112b4a; color:#fff; padding:8px 10px; border-radius:10px}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    border:0; border-radius:12px; padding:10px 14px; font-weight:700; cursor:pointer
+  }
+  .btn-primary{background:var(--sky); color:#00263d}
+  .btn-primary:hover{filter:saturate(1.1)}
+  /* Accent + outline variants */
+  .btn-accent{background:var(--sky); color:#00142a!important; font-weight:800}
+  .btn-accent:hover{filter:brightness(1.08)}
+  .btn-outline{
+    border:2px solid var(--sky); color:var(--sky); background:transparent;
+    font-weight:800; border-radius:12px; padding:10px 14px
+  }
+  .btn-outline:hover{background:var(--sky); color:#00142a}
+
+  @media (max-width:860px){
+    .nav-links{display:none}
+    .nav-cta{margin-left:auto}
+  }
+
+  /* Hero */
+  .hero{
+    background:
+      radial-gradient(1200px 600px at -10% -30%, rgba(255,255,255,.05), transparent 60%),
+      linear-gradient(135deg, #0a2441 0%, #143c6b 60%, #0b2a4a 100%);
+    padding:42px 0 26px;
+  }
+  .hero-grid{display:grid; grid-template-columns:110px 1fr; align-items:center; gap:18px}
+  .hero-badge{display:flex; align-items:center; justify-content:center}
+  .hero-logo{width:84px; height:84px; border-radius:50%; box-shadow:0 0 0 6px rgba(255,255,255,.08)}
+  .hero-copy h1{margin:0 0 8px; font-size:clamp(26px,4.6vw,42px)}
+  .hero-sub{margin:0 0 12px; color:#d9e8f7; max-width:45ch}
+  .actions{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+  .offer-pill{background:var(--accent); color:#2b1900; padding:10px 14px; border-radius:12px; font-weight:800}
+
+  /* Proof & Trust */
+  .hero-proof{display:grid; gap:12px; margin-top:14px}
+  .proof-pair{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+  .proof-pair img{width:100%; height:auto; border-radius:12px}
+  .badge-wrap{position:relative}
+  .img-badge{
+    position:absolute; top:10px; left:10px; padding:6px 10px; border-radius:999px;
+    font-size:.85rem; font-weight:800; color:#00142a; background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.15)
+  }
+  .img-badge.before{background:#ffd6d6}
+  .img-badge.after{background:#d6ffdf}
+  .trust-strip{
+    display:grid; grid-auto-flow:column; gap:12px; align-items:center;
+    background:linear-gradient(90deg,#0f2a3f,#0b1f30); color:#fff; border-radius:12px;
+    padding:10px 14px; font-size:.95rem
+  }
+  .trust-strip span{display:flex; gap:8px; align-items:center; white-space:nowrap}
+
+  /* Sections */
+  .section{padding:42px 0}
+  .section.alt{background:var(--panel)}
+  .section-title{margin:0 0 18px; font-size:clamp(22px,3.6vw,28px)}
+  .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+  .card{
+    background:var(--card); padding:18px; border-radius:var(--radius);
+    display:flex; align-items:center; justify-content:center; min-height:84px; color:#fff;
+    box-shadow:0 1px 0 rgba(0,0,0,.3)
+  }
+  .card:hover{outline:2px solid rgba(0,207,255,.2)}
+  .card h3{margin:0}
+
+  @media (max-width:880px){ .cards{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:520px){ .cards{grid-template-columns:1fr} }
+
+  /* Gallery */
+  .gallery-title{margin:10px 0 4px}
+  .gallery-sub{margin:0 0 12px; color:var(--muted)}
+  .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+  .thumb{position:relative; overflow:hidden; border-radius:14px; background:#0b1322; cursor:pointer}
+  .thumb img{width:100%; height:170px; object-fit:cover; transition:transform .25s ease}
+  .thumb:hover img{transform:scale(1.03)}
+  .thumb .badge{
+    position:absolute; left:8px; top:8px; background:rgba(0,0,0,.55);
+    color:#fff; font-weight:700; border-radius:10px; padding:4px 8px; font-size:12px
+  }
+
+  /* About & Contact */
+  .about-grid{display:block}
+  .contact{background:linear-gradient(180deg, var(--navy) 0%, #0f2f53 100%)}
+  .contact-grid{display:grid; grid-template-columns:330px 1fr; gap:22px; align-items:start}
+  .contact-left a{color:#fff}
+  .contact-form{
+    display:grid; grid-template-columns:1fr 1fr; gap:12px;
+    background:rgba(0,0,0,.25); padding:16px; border-radius:14px
+  }
+  .contact-form label{display:flex; flex-direction:column; gap:6px}
+  .contact-form .full{grid-column:1/-1}
+  .contact-form input, .contact-form textarea, .contact-form select{
+    background:#07101c; border:1px solid rgba(255,255,255,.08);
+    color:#e9f2fa; border-radius:10px; padding:10px
+  }
+  .small{opacity:.8; margin:6px 0 0}
+
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr} }
+
+  /* Footer */
+  .footer{
+    padding:22px 0; background:#08101b; color:#c7d6e6; text-align:center;
+    border-top:1px solid rgba(255,255,255,.05)
+  }
+
+  /* Lightbox */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(0,0,0,.78);
+    display:none; align-items:center; justify-content:center; padding:20px; z-index:100
+  }
+  .lightbox.open{display:flex}
+  .lightbox-img{max-width:92vw; max-height:85vh; border-radius:12px; box-shadow:0 10px 60px rgba(0,0,0,.5)}
+  .lightbox-close{
+    position:absolute; top:14px; right:14px; font-size:28px; line-height:1;
+    background:rgba(255,255,255,.15); border:0; border-radius:10px; color:#fff; padding:6px 10px; cursor:pointer
+  }
+  .lightbox-caption{margin-top:10px; color:#eaeef5; text-align:center}
+
+  /* Accessibility */
+  a,button,input,textarea{outline-offset:3px}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid(var(--sky))}
+  @media (prefers-reduced-motion:reduce){ *{animation:none!important; transition:none!important} }
+  .faq{
+    background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06);
+    border-radius:12px; padding:12px 14px; margin:10px 0
+  }
+  .faq summary{cursor:pointer; font-weight:700; outline:0}
+  .faq[open]{background:rgba(255,255,255,.05)}
+  .faq p{margin:.6rem 0 0}
+
+  /* Contact section – mobile hardening */
+  #contact{ padding:48px 0; background: linear-gradient(180deg, #0b2d4d 0%, #0a243f 100%); }
+  #contact .container{ max-width:1100px; margin:0 auto; padding:0 16px; }
+  #contact .panel, #contact .card, #contact .contact-card, #contact .contact-info{ width:100%; max-width:100%; border-radius:14px; }
+  #contact input, #contact textarea, #contact button{ width:100%; }
+  @media (max-width:768px){
+    #contact .grid, #contact .flex{ display:block !important; }
+    #contact .panel, #contact .card, #contact .contact-card, #contact .contact-info, #contact [class*="col"]{
+      margin:0 0 16px 0 !important; width:100% !important; max-width:100% !important;
+    }
+    #contact *{ max-width:100%; box-sizing:border-box; }
+    #contact textarea{ min-height:140px; }
+  }
+
+  /* Sticky mobile quick actions */
+  .sticky-cta{
+    position:fixed; left:0; right:0; bottom:0; z-index:9999; display:none; gap:8px;
+    padding:10px; background:#071728cc; backdrop-filter:blur(6px);
+    padding-bottom:max(10px, env(safe-area-inset-bottom, 10px));
+    box-shadow:0 -10px 30px rgba(0,0,0,.35);
+  }
+  .sticky-cta a{
+    flex:1; text-align:center; padding:12px 10px; border-radius:14px; font-weight:800;
+    box-shadow:0 10px 22px rgba(0,0,0,.25);
+  }
+  .sticky-cta .call{background:var(--sky); color:#00142a}
+  .sticky-cta .quote{border:2px solid #fff; color:#fff}
+  @media (max-width:820px){ .sticky-cta{display:flex} }
+
+  /* Keep content above sticky bar */
+  body{ padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+
+  /* =============================
+     MOBILE POLISH
+     ============================= */
+
+  /* ≤ 640px general tweaks */
+  @media (max-width:640px){
+    .wrap{ padding:0 14px; }
+    .section{ padding:28px 0; }
+    .section-title{ font-size:22px; margin-bottom:14px; }
 
     /* Header */
-    .site-header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid #e7edf5}
-    .nav-row{display:flex;align-items:center;gap:12px;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:#0b1620}
-    .brand-logo{width:44px;height:44px;border-radius:8px}
-    .nav-links{display:none;gap:16px;margin-left:auto}
-    .nav-links a{padding:8px 6px;color:#1b2a3a;font-weight:600}
-    .nav-cta{display:flex;gap:10px;margin-left:auto;align-items:center}
-    .phone-link{font-weight:800}
+    .nav-row{ padding:8px 0; }
+    .brand span{ font-weight:800; letter-spacing:.1px; }
+    .phone-link{ display:none; } /* we already have sticky bar */
 
     /* Hero */
-    .hero{padding:28px 0 12px;background:linear-gradient(180deg,#f8fbff 0,#fff 100%)}
-    .hero-grid{display:grid;gap:18px;align-items:center}
-    .hero-copy h1{font-size:1.9rem;margin:0 0 8px}
-    .hero-sub{margin:0 0 14px;color:#2b3b4b}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}
-    .hero-proof{margin-top:16px}
-    .proof-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .badge-wrap{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(10,30,60,.07)}
-    .img-badge,.badge{position:absolute;left:10px;top:10px;background:#0b5fff;color:#fff;font-weight:700;padding:6px 10px;border-radius:999px;font-size:.8rem}
-    .img-badge.before,.badge.before{background:#9aa6b2}
-    .img-badge.after,.badge.after{background:#00a86b}
-    .trust-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-    .trust-strip span{background:#eef4ff;padding:6px 10px;border-radius:999px;font-weight:600}
+    .hero{ padding:22px 0 10px; }
+    .hero-grid{ grid-template-columns:1fr; gap:10px; }
+    .hero-badge{ display:none; } /* cleaner top on phones */
+    .hero-copy h1{ font-size:26px; line-height:1.2; margin:0 0 8px; text-wrap:balance; }
+    .hero-sub{ font-size:15.5px; color:#e6f1fc; }
 
-    /* Cards */
-    .cards{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-    .card{background:#fff;border:1px solid #e7edf5;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(10,30,60,.04);text-align:center}
-    .card h3{margin:0;font-size:1.05rem;color:#14202e}
-
-    /* Gallery */
-    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .thumb{border:0;background:#fff;padding:0;cursor:pointer;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(10,30,60,.06);position:relative}
-    .thumb .badge{position:absolute;left:10px;top:10px;padding:6px 10px;border-radius:999px;color:#fff;font-weight:700;background:#0b5fff;font-size:.8rem}
-    .thumb .badge:empty{display:none}
-
-    /* Contact */
-    .contact .contact-grid{display:grid;gap:18px}
-    .contact-form{display:grid;gap:12px;grid-template-columns:1fr}
-    .contact-form label{display:grid;gap:6px}
-    .contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:12px 12px;border:1px solid #cdd7e3;border-radius:10px;font:inherit;background:#fff}
-    .contact-form .full{grid-column:1 / -1}
-
-    /* Footer */
-    .footer{border-top:1px solid #e7edf5;padding:18px 0;color:#445;background:#fafcff}
-
-    /* Sticky CTA */
-    .sticky-cta{position:fixed;inset:auto 12px 12px 12px;display:flex;gap:10px;justify-content:center;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.2) blur(6px);border:1px solid #e7edf5;border-radius:14px;padding:10px;box-shadow:0 10px 30px rgba(10,30,60,.10);z-index:45}
-    .sticky-cta a{flex:1 1 0;padding:12px 14px;text-align:center;border-radius:10px;font-weight:800}
-    .sticky-cta .call{background:#0b5fff;color:#fff}
-    .sticky-cta .quote{background:#eef4ff;color:#0b5fff}
-
-    /* Lightbox */
-    .lightbox{position:fixed;inset:0;background:rgba(5,10,20,.75);display:none;align-items:center;justify-content:center;padding:24px;z-index:60}
-    .lightbox.open{display:flex}
-    .lightbox-img{max-width:min(1200px,95vw);max-height:80vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
-    .lightbox-caption{margin-top:10px;color:#fff;text-align:center;font-weight:600}
-    .lightbox-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:999px;border:0;font-size:28px;line-height:1;background:#fff;color:#0b1620;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.25)}
-
-    /* Desktop ≥900px */
-    @media (min-width:900px){
-      .nav-links{display:flex}
-      .nav-cta{margin-left:0}
-      .hero{padding:58px 0 36px}
-      .hero-grid{grid-template-columns:140px 1fr;gap:26px}
-      .hero-copy h1{font-size:2.4rem}
-      .cards{grid-template-columns:repeat(4,1fr)}
-      .gallery{grid-template-columns:repeat(3,1fr)}
-      .contact .contact-grid{grid-template-columns:1fr 1fr}
-      .contact-form{grid-template-columns:1fr 1fr}
+    /* CTAs */
+    .actions{ display:grid; grid-auto-rows:min-content; gap:10px; }
+    .actions .btn{ width:100%; padding:13px 14px; border-radius:14px; }
+    .btn-outline{
+      border:2px solid #9eddff; color:#e6f6ff;
+      background:#0a2b48; box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
     }
 
-    /* FAQs */
-    details.faq{border:1px solid #e7edf5;border-radius:12px;padding:12px 14px;background:#fff;margin:10px 0}
-    details.faq>summary{cursor:pointer;font-weight:700}
-    details.faq[open]{box-shadow:0 2px 10px rgba(10,30,60,.06)}
+    /* Before/After */
+    .hero-proof{ gap:12px; margin-top:12px; }
+    .proof-pair{ grid-template-columns:1fr; gap:12px; }
+    .badge-wrap img{ width:100%; height:160px; object-fit:cover; border-radius:12px; }
+    .img-badge{ top:10px; left:10px; padding:6px 10px; font-size:.82rem; box-shadow:0 2px 10px rgba(0,0,0,.18); }
+
+    /* Trust strip */
+    .trust-strip{
+      grid-auto-flow:row; gap:8px; justify-items:start; text-align:left;
+      padding:14px; border-radius:16px;
+      background: radial-gradient(60% 130% at 10% -10%, rgba(255,255,255,.06), transparent 55%),
+                  linear-gradient(180deg, #0e2238, #0b1e31);
+      box-shadow:0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+    }
+
+    /* Services */
+    .cards{ grid-template-columns:1fr 1fr; gap:12px; }
+    .card{ min-height:76px; padding:16px; border-radius:14px; }
+
+    /* Gallery */
+    .gallery{ grid-template-columns:1fr 1fr; gap:10px; }
+    .thumb img{ height:160px; }
+  }
+
+  /* ≤ 540px fine-tuning */
+  @media (max-width:540px){
+    .nav-cta .btn{ display:none; } /* avoid duplicate Call Now in header */
+    .hero{ padding-bottom:6px; }
+    .cards .card h3{ font-size:18px; line-height:1.25; text-align:left; }
+    .faq summary{ padding:10px 2px; font-size:18px; }
+  }
+
+  /* ≤ 360px ensure sticky bar never overlaps form submit */
+  @media (max-width:360px){
+    body{ padding-bottom:74px; }
+  }
+
+  /* Extras */
+  .thumb{ border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.25); }
   </style>
 </head>
 
@@ -228,8 +364,8 @@
         </p>
 
         <div class="actions">
-          <a class="btn btn-primary" href="tel:+447519589731" aria-label="Call HydroSmiths now for a free quote" onclick="return gtag_report_conversion('tel:+447519589731')">📞 Call Now for a Free Quote</a>
-          <a class="btn btn-outline" href="#contact" aria-label="Open the quote form">💬 Get Free Quote Online</a>
+          <a class="btn btn-primary" href="tel:+447519589731" onclick="return gtag_report_conversion('tel:+447519589731')">📞 Call Now for a Free Quote</a>
+          <a class="btn btn-outline" href="#contact">💬 Get Free Quote Online</a>
         </div>
 
         <div class="hero-proof">
@@ -279,13 +415,6 @@
       <p class="gallery-sub">Recent patio cleans from local customers.</p>
 
       <div class="gallery" id="patio-gallery"></div>
-
-      <div class="cards" style="margin-top:18px">
-        <div class="card"><h3>Driveway Cleaning — photos coming soon</h3></div>
-        <div class="card"><h3>Wall Cleaning — photos coming soon</h3></div>
-        <div class="card"><h3>Roof &amp; Gutter — photos coming soon</h3></div>
-        <div class="card"><h3>More Projects — uploading</h3></div>
-      </div>
     </div>
   </section>
 
@@ -312,7 +441,7 @@
   <!-- Contact -->
   <section id="contact" class="section contact">
     <div class="wrap contact-grid">
-      <div>
+      <div class="contact-left">
         <h2 class="section-title">Get Your Free Quote</h2>
         <p><strong>Phone:</strong> <a href="tel:+447519589731">07519 589731</a></p>
         <p><strong>Email:</strong> <a href="mailto:hydrosmiths123@gmail.com">hydrosmiths123@gmail.com</a></p>
@@ -360,10 +489,8 @@
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close (Esc)">×</button>
-    <div>
-      <img class="lightbox-img" alt="Expanded before-and-after cleaning photo — HydroSmiths North Walsham">
-      <div class="lightbox-caption"></div>
-    </div>
+    <img class="lightbox-img" alt="Expanded before-and-after cleaning photo — HydroSmiths North Walsham">
+    <div class="lightbox-caption"></div>
   </div>
 
   <!-- Scripts -->
