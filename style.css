@@ -288,3 +288,53 @@ body{ padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 @media (max-width: 360px){
   body { padding-bottom: 74px; }
 }
+/* ---- Mobile polish ---- */
+@media (max-width: 640px) {
+  :root { --space: 14px; --radius: 14px; }
+
+  body { font-size: 16px; line-height: 1.5; }
+
+  /* Hero */
+  .hero { padding-top: 18px; padding-bottom: 18px; }
+  .hero h1 { font-size: 24px; line-height: 1.2; margin-bottom: 10px; }
+  .hero .sub { font-size: 14px; opacity: .9; }
+
+  /* Primary CTAs – full width, stacked */
+  .cta-row { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .btn { width: 100%; padding: 14px 16px; border-radius: 999px; font-weight: 700; }
+
+  /* Before/After images – no overflow, same height */
+  .ba-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .ba-row img { width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius); }
+
+  /* Icon chips under review */
+  .benefits { flex-wrap: wrap; gap: 8px; }
+  .benefits .chip { padding: 8px 10px; font-size: 12px; border-radius: 999px; }
+
+  /* Services – 2-by-2 large buttons */
+  .services-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+  }
+  .service-card {
+    padding: 14px; border-radius: var(--radius);
+    text-align: center; font-weight: 600;
+  }
+
+  /* Gallery cards */
+  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .work-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); }
+  .work-card .caption { font-size: 12px; margin-top: 6px; }
+
+  /* Section spacing */
+  section { padding: 18px var(--space); }
+  .section-title { font-size: 18px; margin-bottom: 10px; }
+
+  /* Footer sticky bar spacing */
+  .sticky-bar { bottom: 8px; left: 8px; right: 8px; gap: 8px; }
+}
+
+/* Avoid layout shifts */
+img { max-width: 100%; height: auto; display: block; }
+.work-card img, .ba-row img { background: #0f172a; }
